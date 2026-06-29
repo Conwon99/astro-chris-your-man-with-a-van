@@ -57,28 +57,29 @@ const ServiceAreas = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Google Maps */}
+          {/* Coverage Area */}
           <div className="relative">
             <div className="bg-gradient-to-br from-primary/10 to-primary/5 rounded-2xl p-4 border-2 border-primary/20">
-              <div className="aspect-square rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2258.5!2d-4.5!3d55.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488f8b8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sAyrshire%2C%20UK!5e0!3m2!1sen!2suk!4v1234567890123!5m2!1sen!2suk"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Chris Van Services - Ayrshire Coverage Area"
-                ></iframe>
-              </div>
-              <div className="mt-4 text-center">
-                <h3 className="font-display font-bold text-xl text-primary mb-2">
-                  Ayrshire Coverage Area
-                </h3>
-                <p className="text-muted-foreground text-sm">
-                  Serving Cumnock and surrounding areas
-                </p>
+              <div className="aspect-square rounded-xl overflow-hidden shadow-lg flex items-center justify-center bg-background">
+                <div className="text-center p-8 space-y-4">
+                  <MapPin className="w-16 h-16 text-primary mx-auto" />
+                  <div>
+                    <h3 className="font-display font-bold text-2xl text-primary mb-2">
+                      Ayrshire Coverage Area
+                    </h3>
+                    <p className="text-muted-foreground text-sm">
+                      Serving Cumnock and surrounding areas
+                    </p>
+                  </div>
+                  <a
+                    href="https://maps.google.com/?q=Cumnock,+Ayrshire,+Scotland"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-5 py-2.5 rounded-lg text-white font-semibold text-sm bg-primary hover:bg-[hsl(19_67%_39%)] transition-colors"
+                  >
+                    View on Google Maps
+                  </a>
+                </div>
               </div>
             </div>
           </div>
