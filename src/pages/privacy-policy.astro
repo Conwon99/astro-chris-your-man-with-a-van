@@ -1,0 +1,202 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import Footer from '../components/Footer';
+---
+
+<BaseLayout
+  title="Privacy Policy | Chris, Your Man with a Van"
+  description="Privacy policy for Chris, Your Man with a Van — how we collect, use and protect your personal data in compliance with UK GDPR."
+  canonical="https://chrisyourmanwithavan.com/privacy-policy"
+  robots="noindex, follow"
+>
+  <Navigation client:load />
+
+  <main class="min-h-screen py-24 px-4" style="background-color: hsl(var(--background)); color: hsl(var(--foreground));">
+    <div class="container mx-auto max-w-3xl">
+
+      <h1 class="font-display text-4xl font-bold mb-2" style="color: hsl(51 85% 60%);">
+        Privacy Policy
+      </h1>
+      <p class="text-white/60 text-sm mb-10">Last updated: 29 June 2026</p>
+
+      <div class="prose prose-invert max-w-none space-y-8 text-white/85 leading-relaxed">
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">1. Who we are</h2>
+          <p>
+            <strong>Chris, Your Man with a Van Ltd</strong> (company number SC 882440) is the data controller for this website.
+          </p>
+          <address class="not-italic mt-3 space-y-0.5">
+            <p>147 Glaisnock Street</p>
+            <p>Cumnock, KA18 1JT</p>
+            <p>Ayrshire, Scotland</p>
+            <p class="mt-2">
+              Email: <a href="mailto:chris@chrisyourmanwithavan.com" style="color: hsl(51 85% 60%);">chris@chrisyourmanwithavan.com</a>
+            </p>
+          </address>
+          <p class="mt-3">
+            We are registered in Scotland and subject to <strong>UK GDPR</strong> as applied by the Data Protection Act 2018. The supervisory authority for the UK is the <strong>Information Commissioner's Office (ICO)</strong>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">2. What data we collect and why</h2>
+
+          <h3 class="text-lg font-semibold mt-4 mb-2 text-white">2a. Analytics (with your consent)</h3>
+          <p>
+            If you accept cookies, we use <strong>Google Analytics 4</strong> and <strong>Meta Pixel</strong> to understand how visitors use our site. These tools may collect:
+          </p>
+          <ul class="list-disc pl-6 mt-2 space-y-1">
+            <li>Pages you visit and how long you spend on them</li>
+            <li>How you found our site (referrer / source)</li>
+            <li>Actions such as clicking to call, opening WhatsApp, or viewing our services</li>
+            <li>Your approximate geographic region (derived from IP address — IP addresses themselves are anonymised by Google)</li>
+            <li>Device type, browser, and operating system</li>
+          </ul>
+          <p class="mt-2">
+            <strong>Lawful basis:</strong> Consent (UK GDPR Art. 6(1)(a)).
+            You can withdraw consent at any time using the <strong>Cookie Settings</strong> link in the footer.
+          </p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2 text-white">2b. Contact enquiries</h3>
+          <p>
+            When you contact us via phone, WhatsApp, Facebook Messenger, or email, we receive the personal data you share (name, phone number, message content). We use this solely to respond to your enquiry and arrange services.
+          </p>
+          <p class="mt-2">
+            <strong>Lawful basis:</strong> Legitimate interest in responding to customer enquiries (UK GDPR Art. 6(1)(f)) and, where a contract results, performance of that contract (Art. 6(1)(b)).
+          </p>
+
+          <h3 class="text-lg font-semibold mt-6 mb-2 text-white">2c. Google Business reviews</h3>
+          <p>
+            We display reviews fetched from the Google Places API. This is a server-side read — no personal data you provide to us is sent to Google as part of this process. Review authors' names and content are publicly available on Google Maps.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">3. Cookies</h2>
+          <p>Cookies are small text files stored on your device. We use the following:</p>
+
+          <div class="overflow-x-auto mt-4">
+            <table class="w-full text-sm border-collapse">
+              <thead>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
+                  <th class="text-left py-2 pr-4 font-semibold text-white">Cookie / Storage key</th>
+                  <th class="text-left py-2 pr-4 font-semibold text-white">Purpose</th>
+                  <th class="text-left py-2 pr-4 font-semibold text-white">Type</th>
+                  <th class="text-left py-2 font-semibold text-white">Expiry</th>
+                </tr>
+              </thead>
+              <tbody class="text-white/75">
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                  <td class="py-2 pr-4 font-mono text-xs">sidebar:state</td>
+                  <td class="py-2 pr-4">Remembers whether the navigation sidebar is open or closed</td>
+                  <td class="py-2 pr-4">Essential</td>
+                  <td class="py-2">7 days</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                  <td class="py-2 pr-4 font-mono text-xs">cookie_consent</td>
+                  <td class="py-2 pr-4">Stores your cookie preference so we don't ask again</td>
+                  <td class="py-2 pr-4">Essential</td>
+                  <td class="py-2">Persistent (localStorage)</td>
+                </tr>
+                <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                  <td class="py-2 pr-4 font-mono text-xs">_ga, _ga_*, _gid</td>
+                  <td class="py-2 pr-4">Google Analytics — distinguish users and sessions</td>
+                  <td class="py-2 pr-4">Analytics (consent required)</td>
+                  <td class="py-2">Up to 2 years</td>
+                </tr>
+                <tr>
+                  <td class="py-2 pr-4 font-mono text-xs">_fbp, _fbc</td>
+                  <td class="py-2 pr-4">Meta Pixel — tracks conversions from Facebook ads</td>
+                  <td class="py-2 pr-4">Marketing (consent required)</td>
+                  <td class="py-2">90 days</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="mt-4">
+            Analytics and marketing cookies are only set <strong>after you click "Accept all cookies"</strong>. You can change your preference at any time via <strong>Cookie Settings</strong> in the footer.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">4. Who we share your data with</h2>
+          <p>We share data with the following third parties where you have consented to analytics cookies:</p>
+
+          <ul class="list-disc pl-6 mt-2 space-y-2">
+            <li>
+              <strong>Google LLC</strong> — Google Analytics 4 (measurement IDs: G-V7YSJ55C9T, G-L1XB9GKZ7E) and Google Fonts (fonts are now served locally — no request is made to Google's font servers). Google may transfer data to the United States under Standard Contractual Clauses.
+              <br /><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(51 85% 60%);">Google Privacy Policy</a>
+            </li>
+            <li>
+              <strong>Meta Platforms, Inc.</strong> — Meta Pixel (ID: 24850345264644281) for measuring advertising effectiveness. Meta may transfer data to the United States under Standard Contractual Clauses.
+              <br /><a href="https://www.facebook.com/privacy/policy/" target="_blank" rel="noopener noreferrer" style="color: hsl(51 85% 60%);">Meta Privacy Policy</a>
+            </li>
+          </ul>
+
+          <p class="mt-3">We do not sell your personal data to any third party.</p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">5. Data retention</h2>
+          <ul class="list-disc pl-6 space-y-1">
+            <li><strong>Google Analytics:</strong> Retained for 26 months (Google's default). You can request deletion via Google's <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener noreferrer" style="color: hsl(51 85% 60%);">Data & Privacy settings</a>.</li>
+            <li><strong>Meta Pixel:</strong> Retained for up to 180 days by Meta.</li>
+            <li><strong>Contact enquiry data:</strong> Retained for as long as needed to fulfil the service, then deleted within 12 months of the last interaction.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">6. Your rights under UK GDPR</h2>
+          <p>You have the following rights regarding your personal data:</p>
+          <ul class="list-disc pl-6 mt-2 space-y-1">
+            <li><strong>Access</strong> — request a copy of the data we hold about you</li>
+            <li><strong>Rectification</strong> — ask us to correct inaccurate data</li>
+            <li><strong>Erasure</strong> — ask us to delete your data ("right to be forgotten")</li>
+            <li><strong>Restriction</strong> — ask us to limit processing of your data</li>
+            <li><strong>Portability</strong> — receive your data in a machine-readable format</li>
+            <li><strong>Objection</strong> — object to processing based on legitimate interest</li>
+            <li><strong>Withdraw consent</strong> — withdraw analytics cookie consent at any time via Cookie Settings in the footer</li>
+          </ul>
+          <p class="mt-3">
+            To exercise any right, email us at{" "}
+            <a href="mailto:chris@chrisyourmanwithavan.com" style="color: hsl(51 85% 60%);">chris@chrisyourmanwithavan.com</a>.
+            We will respond within 30 days. You also have the right to lodge a complaint with the ICO at{" "}
+            <a href="https://ico.org.uk/make-a-complaint/" target="_blank" rel="noopener noreferrer" style="color: hsl(51 85% 60%);">ico.org.uk</a>.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">7. Security</h2>
+          <p>
+            Our website is served over HTTPS. We implement security headers including strict X-Frame-Options, X-Content-Type-Options, and a Referrer Policy. We do not store payment card data.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">8. Changes to this policy</h2>
+          <p>
+            We may update this policy from time to time. The "Last updated" date at the top of this page will reflect any changes. Material changes will be communicated via a notice on the website.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-display text-2xl font-semibold mb-3" style="color: hsl(19 67% 49%);">9. Contact us</h2>
+          <p>
+            For any privacy-related questions or to exercise your data rights, contact:
+          </p>
+          <address class="not-italic mt-2 space-y-0.5">
+            <p><strong>Chris, Your Man with a Van Ltd</strong></p>
+            <p>147 Glaisnock Street, Cumnock, KA18 1JT</p>
+            <p>Email: <a href="mailto:chris@chrisyourmanwithavan.com" style="color: hsl(51 85% 60%);">chris@chrisyourmanwithavan.com</a></p>
+          </address>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <Footer client:load />
+</BaseLayout>

@@ -1,5 +1,6 @@
 import { Phone, Mail, MapPin, Facebook } from "lucide-react";
 import { trackExternalLink, trackNavigation, trackFacebookPageClick } from "@/utils/analytics";
+import { openConsentBanner } from "@/utils/consentManager";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -166,15 +167,26 @@ const Footer = () => {
             <div className="text-[hsl(var(--sunshine-yellow))] text-sm">
               © {currentYear} Chris, Your Man with a Van. All rights reserved.
             </div>
-            <div className="text-[hsl(var(--sunshine-yellow))] text-sm text-center">
-              Website designed by{" "}
+            <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-1 text-sm">
+              <a
+                href="/privacy-policy"
+                className="text-[hsl(var(--sunshine-yellow))] hover:text-white transition-colors underline"
+              >
+                Privacy Policy
+              </a>
+              <button
+                onClick={openConsentBanner}
+                className="text-[hsl(var(--sunshine-yellow))] hover:text-white transition-colors underline bg-transparent border-0 cursor-pointer p-0 text-sm"
+              >
+                Cookie Settings
+              </button>
               <a
                 href="https://codapixel.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-white transition-colors underline"
+                className="text-[hsl(var(--sunshine-yellow))] hover:text-white transition-colors underline"
               >
-                CodaPixel
+                Website by CodaPixel
               </a>
             </div>
           </div>
