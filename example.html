@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RevuCapture Analytics Example</title>
+    
+    <!-- RevuCapture Analytics Script -->
+    <script 
+        src="./revucapture-tracker.js"
+        data-website-id="demo-website-123"
+        data-api-key="demo-api-key-456"
+        data-api-endpoint="https://api.revucapture.com/track">
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .button {
+            background-color: #007cba;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+            font-size: 16px;
+        }
+        
+        .button:hover {
+            background-color: #005a87;
+        }
+        
+        .form-group {
+            margin: 15px 0;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .privacy-notice {
+            background-color: #f0f8ff;
+            border: 1px solid #007cba;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        
+        .debug-panel {
+            background-color: #f5f5f5;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .tracking-controls {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>RevuCapture Analytics Demo</h1>
+    
+    <p>This page demonstrates the RevuCapture analytics tracking script. All interactions on this page are being tracked automatically.</p>
+    
+    <!-- Privacy Notice -->
+    <div class="privacy-notice">
+        <h3>🔒 Privacy Notice</h3>
+        <p>This website uses analytics to improve user experience. You can opt out of tracking at any time.</p>
+        <button class="button" onclick="toggleTracking()">Toggle Tracking</button>
+        <span id="tracking-status">Tracking: Enabled</span>
+    </div>
+    
+    <!-- Tracking Controls -->
+    <div class="tracking-controls">
+        <h3>🎯 Custom Event Tracking</h3>
+        <button class="button" onclick="trackCustomEvent('demo_button_click')">Track Custom Event</button>
+        <button class="button" onclick="trackPurchase()">Track Purchase</button>
+        <button class="button" onclick="trackGoal()">Track Goal</button>
+    </div>
+    
+    <!-- Interactive Elements for Tracking -->
+    <h2>Interactive Elements</h2>
+    
+    <p>Click these buttons to see click tracking in action:</p>
+    <button class="button" id="btn-1">Primary Action</button>
+    <button class="button" id="btn-2">Secondary Action</button>
+    <button class="button" id="btn-3">Tertiary Action</button>
+    
+    <h3>Links</h3>
+    <p>Internal and external link tracking:</p>
+    <a href="#section1" class="button">Internal Link</a>
+    <a href="https://google.com" class="button" target="_blank">External Link (Google)</a>
+    <a href="https://github.com" class="button" target="_blank">External Link (GitHub)</a>
+    
+    <!-- Form for Testing Form Tracking -->
+    <h2>Contact Form</h2>
+    <form id="contact-form" onsubmit="return handleFormSubmit(event)">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit" class="button">Send Message</button>
+    </form>
+    
+    <!-- Scroll Content for Scroll Tracking -->
+    <div id="section1">
+        <h2>Scroll Tracking Section</h2>
+        <p>This section tests scroll depth tracking. Scroll down to see scroll events in the debug panel.</p>
+        
+        <div style="height: 500px; background: linear-gradient(to bottom, #f0f0f0, #e0e0e0); padding: 20px; margin: 20px 0;">
+            <h3>Content Block 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        
+        <div style="height: 500px; background: linear-gradient(to bottom, #e0e0e0, #d0d0d0); padding: 20px; margin: 20px 0;">
+            <h3>Content Block 2</h3>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+        
+        <div style="height: 500px; background: linear-gradient(to bottom, #d0d0d0, #c0c0c0); padding: 20px; margin: 20px 0;">
+            <h3>Content Block 3</h3>
+            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        </div>
+    </div>
+    
+    <!-- Debug Panel -->
+    <div class="debug-panel">
+        <h3>🔍 Debug Information</h3>
+        <div id="debug-info">
+            <p><strong>Page Load Time:</strong> <span id="load-time">Calculating...</span></p>
+            <p><strong>Session ID:</strong> <span id="session-id">Loading...</span></p>
+            <p><strong>User Agent:</strong> <span id="user-agent"></span></p>
+            <p><strong>Screen Resolution:</strong> <span id="screen-res"></span></p>
+            <p><strong>Device Type:</strong> <span id="device-type"></span></p>
+        </div>
+        
+        <h4>Recent Events:</h4>
+        <div id="event-log" style="max-height: 200px; overflow-y: auto; border: 1px solid #ccc; padding: 10px; background: white;">
+            <p><em>Events will appear here...</em></p>
+        </div>
+        
+        <button class="button" onclick="clearEventLog()" style="margin-top: 10px;">Clear Log</button>
+    </div>
+    
+    <script>
+        // Custom event tracking functions
+        function trackCustomEvent(eventName) {
+            if (window.RevuCapture) {
+                RevuCapture.trackEvent(eventName, {
+                    button: 'demo_button',
+                    timestamp: Date.now(),
+                    page: window.location.pathname
+                });
+                logEvent(`Custom event tracked: ${eventName}`);
+            }
+        }
+        
+        function trackPurchase() {
+            if (window.RevuCapture) {
+                RevuCapture.trackPurchase('demo-order-123', 99.99, 'USD', [
+                    { id: 'product-1', name: 'Demo Product', price: 99.99, quantity: 1 }
+                ]);
+                logEvent('Purchase tracked: $99.99');
+            }
+        }
+        
+        function trackGoal() {
+            if (window.RevuCapture) {
+                RevuCapture.trackGoal('demo_goal', 10.00);
+                logEvent('Goal tracked: demo_goal');
+            }
+        }
+        
+        function toggleTracking() {
+            if (window.RevuCapture) {
+                if (RevuCapture.isOptedOut()) {
+                    RevuCapture.optIn();
+                    document.getElementById('tracking-status').textContent = 'Tracking: Enabled';
+                    logEvent('User opted in to tracking');
+                } else {
+                    RevuCapture.optOut();
+                    document.getElementById('tracking-status').textContent = 'Tracking: Disabled';
+                    logEvent('User opted out of tracking');
+                }
+            }
+        }
+        
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Track form submission
+            if (window.RevuCapture) {
+                RevuCapture.track('form_interaction', {
+                    form: {
+                        action: 'submit',
+                        id: 'contact-form',
+                        fields: ['name', 'email', 'message']
+                    }
+                });
+                logEvent('Form submitted successfully');
+            }
+            
+            // Simulate form processing
+            setTimeout(() => {
+                alert('Thank you for your message! (This is just a demo)');
+            }, 100);
+            
+            return false;
+        }
+        
+        function logEvent(message) {
+            const eventLog = document.getElementById('event-log');
+            const timestamp = new Date().toLocaleTimeString();
+            const logEntry = document.createElement('p');
+            logEntry.innerHTML = `<strong>[${timestamp}]</strong> ${message}`;
+            
+            if (eventLog.children.length === 1 && eventLog.children[0].tagName === 'EM') {
+                eventLog.innerHTML = '';
+            }
+            
+            eventLog.insertBefore(logEntry, eventLog.firstChild);
+            
+            // Keep only last 20 entries
+            while (eventLog.children.length > 20) {
+                eventLog.removeChild(eventLog.lastChild);
+            }
+        }
+        
+        function clearEventLog() {
+            document.getElementById('event-log').innerHTML = '<p><em>Events will appear here...</em></p>';
+        }
+        
+        // Initialize debug information
+        window.addEventListener('load', function() {
+            // Update debug panel
+            document.getElementById('user-agent').textContent = navigator.userAgent;
+            document.getElementById('screen-res').textContent = `${screen.width}x${screen.height}`;
+            
+            // Determine device type
+            const deviceType = screen.width <= 768 ? 'Mobile' : 
+                              screen.width <= 1024 ? 'Tablet' : 'Desktop';
+            document.getElementById('device-type').textContent = deviceType;
+            
+            // Calculate load time
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            document.getElementById('load-time').textContent = `${loadTime}ms`;
+            
+            // Get session ID (if available)
+            setTimeout(() => {
+                if (window.RevuCapture) {
+                    // Session ID is internal, but we can show that tracking is active
+                    document.getElementById('session-id').textContent = 'Active (ID hidden for privacy)';
+                }
+            }, 1000);
+            
+            logEvent('Page loaded and tracking initialized');
+        });
+        
+        // Track page interactions
+        document.addEventListener('click', function(event) {
+            if (event.target.tagName === 'BUTTON' || event.target.tagName === 'A') {
+                const element = event.target;
+                const elementInfo = element.id ? `#${element.id}` : 
+                                  element.className ? `.${element.className.split(' ')[0]}` : 
+                                  element.tagName;
+                logEvent(`Click tracked: ${elementInfo}`);
+            }
+        });
+        
+        // Track scroll events (throttled)
+        let scrollTimeout;
+        window.addEventListener('scroll', function() {
+            clearTimeout(scrollTimeout);
+            scrollTimeout = setTimeout(() => {
+                const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+                logEvent(`Scroll tracked: ${scrollPercent}% depth`);
+            }, 500);
+        });
+    </script>
+</body>
+</html>
+
+

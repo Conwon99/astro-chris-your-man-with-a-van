@@ -1,0 +1,37 @@
+SMART WEBP CONVERSION REPORT
+====================================================================================================
+Generated: 2025-10-29T22:04:26.423Z
+Total Images: 37
+Converted: 37
+Kept Original: 0
+
+Total Original Size: 23.91 MB
+Total WebP Size: 13.34 MB
+Total Space Saved: 10.56 MB (44.2%)
+
+
+CONVERTED FILES (WebP smaller):
+----------------------------------------------------------------------------------------------------
+File                                                       Original        WebP           Savings
+----------------------------------------------------------------------------------------------------
+public/chrisback.png                                        2.41 MB    59.28 KB   2.35 MB (97.6%)
+...e-uploads/261430b9-3f76-4615-bc01-41659d58a82f.png       1.56 MB   174.88 KB   1.39 MB (89.0%)
+public/chris.png                                            1.28 MB    70.61 KB   1.21 MB (94.6%)
+public/1.png                                              991.42 KB    121.4 KB 870.02 KB (87.8%)
+...e-uploads/3eec67ad-e7bc-4af0-b6fd-3453d660c296.png     895.31 KB    89.29 KB 806.03 KB (90.0%)
+public/vanv3.png                                          818.73 KB    17.77 KB 800.96 KB (97.8%)
+...e-uploads/5314906b-f385-471d-9ac6-f3b6a8c923f5.png     781.43 KB    59.51 KB 721.92 KB (92.4%)
+public/t.png                                              819.71 KB   101.63 KB 718.09 KB (87.6%)
+public/2.png                                              519.22 KB    54.02 KB  465.2 KB (89.6%)
+public/lovable-uploads/garden1.jpg                          1.35 MB   965.83 KB 420.43 KB (30.3%)
+public/houseback.jpg                                     1015.77 KB   696.59 KB 319.18 KB (31.4%)
+public/services/removals.jpg                              518.12 KB   319.28 KB 198.84 KB (38.4%)
+public/services/endtenancy.jpg                            261.81 KB   173.55 KB  88.26 KB (33.7%)
+public/vanlogo.png                                        123.44 KB    35.96 KB  87.49 KB (70.9%)
+public/Van logo edit.png                                  103.05 KB    35.27 KB  67.78 KB (65.8%)
+public/website_background_full.jpg                        129.24 KB    69.98 KB  59.25 KB (45.8%)
+public/services/delivery.jpg                               501.9 KB   457.23 KB   44.68 KB (8.9%)
+...we-Maintenance-City-Guilds-NPTC-Qualifications.jpg      79.45 KB     37.1 KB  42.34 KB (53.3%)
+public/services/tiprun.jpg                                 543.4 KB   519.08 KB   24.32 KB (4.5%)
+public/lovable-uploads/treecutting.jpg                    190.26 KB   177.87 KB   12.39 KB (6.5%)
+src/assets/service-fencing.jpg                            126.59 KB   124.51 KB    2.08 KB (1.6%)

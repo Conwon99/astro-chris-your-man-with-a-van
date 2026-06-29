@@ -1,0 +1,57 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+  functions = ".netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "18"
+
+# Clear build cache to force fresh builds
+# Uncomment the line below if you need to clear cache for next deployment
+# [build.processing]
+#   skip_processing = false
+
+# Note: For custom domains, configure www→non-www redirect in Netlify Dashboard
+# Settings → Domain Management → Select domain → Enable "Force HTTPS" and redirect www
+# Current site uses non-www as canonical (all meta tags use non-www URLs)
+
+# Redirects are handled in public/_redirects file
+# This avoids conflicts and ensures proper order
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Content-Type = "text/plain"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Content-Type = "application/xml"
+
+[[headers]]
+  for = "*.webp"
+  [headers.values]
+    Content-Type = "image/webp"
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+
+
+

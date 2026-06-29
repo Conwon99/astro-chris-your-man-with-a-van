@@ -1,0 +1,66 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import TrustBar from '../components/TrustBar';
+import AboutUs from '../components/AboutUs';
+import ProjectShowcase from '../components/ProjectShowcase';
+import ServicesGrid from '../components/ServicesGrid';
+import ServiceAreas from '../components/ServiceAreas';
+import NearMeSection from '../components/NearMeSection';
+import Reviews from '../components/Reviews';
+import FAQ from '../components/FAQ';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
+import '../index.css';
+---
+
+<BaseLayout
+  title="Man with a Van Near Me | Ayrshire | Chris"
+  description="Man with a van near you in Ayrshire. 77 five-star Google reviews. Removals, courier, waste removal & flat-pack assembly. SEPA registered. Free WhatsApp quotes."
+  keywords="chris your man with a van, van services ayrshire, man with a van cumnock, removals ayrshire, courier services ayrshire, reliable man with a van ayrshire, sepa registered waste removal ayrshire, affordable removals ayrshire, small removals ayrshire, house moves ayrshire"
+  canonical="https://chrisyourmanwithavan.com/"
+>
+  <main class="min-h-screen">
+    <Navigation client:load />
+    <Hero />
+    <TrustBar />
+    <AboutUs />
+    <ProjectShowcase />
+    <ServicesGrid />
+    <NearMeSection />
+    <ServiceAreas />
+    <Reviews client:visible />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Chris, Your Man with a Van",
+      "url": "https://chrisyourmanwithavan.com/",
+      "description": "Man with a van services across Ayrshire. Removals, courier, waste removal and flat-pack assembly.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Chris, Your Man with a Van",
+        "logo": "https://chrisyourmanwithavan.com/vanlogo.png"
+      }
+    })} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type":"Question","name":"How much does a small removal cost?","acceptedAnswer":{"@type":"Answer","text":"Small removal costs vary depending on items, distance, and complexity. Basic small removals typically start from £50-100; larger moves can range from £150-400. Contact via WhatsApp for a free quote."}},
+        {"@type":"Question","name":"Do you provide same-day courier services?","acceptedAnswer":{"@type":"Answer","text":"Yes. We offer same-day courier and delivery across Ayrshire and the UK for urgent packages, furniture collection, and documents. Message on WhatsApp for immediate help."}},
+        {"@type":"Question","name":"What areas do you cover?","acceptedAnswer":{"@type":"Answer","text":"All of Ayrshire and beyond. Courier services are available across the UK. Contact us to confirm your location."}},
+        {"@type":"Question","name":"Are you SEPA registered for waste removal?","acceptedAnswer":{"@type":"Answer","text":"Yes. We are SEPA registered for legal waste disposal and tip runs, and fully insured for all van services."}},
+        {"@type":"Question","name":"What types of waste do you collect?","acceptedAnswer":{"@type":"Answer","text":"Bin bags, garage and shed clearances, end-of-tenancy clearances, old fencing, and general waste. All disposed of legally."}},
+        {"@type":"Question","name":"Do you provide in-store collection and delivery?","acceptedAnswer":{"@type":"Answer","text":"Yes. Collection from furniture stores and online purchases with careful delivery to your door. Same-day when possible."}},
+        {"@type":"Question","name":"Do you offer free quotes?","acceptedAnswer":{"@type":"Answer","text":"Yes. Free, no-obligation quotes via WhatsApp, phone (07735 852822), or the contact form on this website."}},
+        {"@type":"Question","name":"Do you offer a man with a van near me in Ayrshire?","acceptedAnswer":{"@type":"Answer","text":"Yes. Chris serves Cumnock, Irvine, Ayr, Kilmarnock, Troon, Prestwick, Kilwinning, Ardrossan and towns across Ayrshire. Message on WhatsApp for a free quote."}},
+        {"@type":"Question","name":"How many Google reviews does Chris have?","acceptedAnswer":{"@type":"Answer","text":"Chris has 77 five-star Google reviews from satisfied customers across Ayrshire."}}
+      ]
+    })} />
+    <FAQ client:visible />
+    <ContactSection client:visible />
+    <Footer />
+  </main>
+</BaseLayout>
+

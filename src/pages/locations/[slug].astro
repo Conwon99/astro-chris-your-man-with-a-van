@@ -1,0 +1,196 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LocationDetailComponent from '../../pages/LocationDetail';
+import { getLocationHubTitle, getLocationHubMeta } from '../../data/locationServices';
+import '../../index.css';
+
+// Location data mapping for SEO metadata
+const locationData: Record<string, { name: string; metaDescription: string }> = {
+  "cumnock": {
+    name: "Cumnock",
+    metaDescription: "Expert van services in Cumnock. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "ayr": {
+    name: "Ayr",
+    metaDescription: "Expert van services in Ayr. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "kilmarnock": {
+    name: "Kilmarnock",
+    metaDescription: "Expert van services in Kilmarnock. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "irvine": {
+    name: "Irvine",
+    metaDescription: "Expert van services in Irvine. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "troon": {
+    name: "Troon",
+    metaDescription: "Expert van services in Troon. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "prestwick": {
+    name: "Prestwick",
+    metaDescription: "Expert van services in Prestwick. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "kirkconnel": {
+    name: "Kirkconnel",
+    metaDescription: "Expert van services in Kirkconnel, Dumfries & Galloway. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes."
+  },
+  "sanquhar": {
+    name: "Sanquhar",
+    metaDescription: "Expert van services in Sanquhar, Dumfries & Galloway. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes."
+  },
+  "mossblown": {
+    name: "Mossblown",
+    metaDescription: "Expert van services in Mossblown. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "ardrossan": {
+    name: "Ardrossan",
+    metaDescription: "Expert van services in Ardrossan. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "dreghorn": {
+    name: "Dreghorn",
+    metaDescription: "Expert van services in Dreghorn. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "saltcoats": {
+    name: "Saltcoats",
+    metaDescription: "Expert van services in Saltcoats. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "beith": {
+    name: "Beith",
+    metaDescription: "Expert van services in Beith. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "stewarton": {
+    name: "Stewarton",
+    metaDescription: "Expert van services in Stewarton. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "patna": {
+    name: "Patna",
+    metaDescription: "Expert van services in Patna. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "dalmellington": {
+    name: "Dalmellington",
+    metaDescription: "Expert van services in Dalmellington. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "maybole": {
+    name: "Maybole",
+    metaDescription: "Expert van services in Maybole. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "newmilns": {
+    name: "Newmilns",
+    metaDescription: "Expert van services in Newmilns. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "darvel": {
+    name: "Darvel",
+    metaDescription: "Expert van services in Darvel. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "dalrymple": {
+    name: "Dalrymple",
+    metaDescription: "Expert van services in Dalrymple. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "galston": {
+    name: "Galston",
+    metaDescription: "Expert van services in Galston. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "girvan": {
+    name: "Girvan",
+    metaDescription: "Expert van services in Girvan. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "dalry": {
+    name: "Dalry",
+    metaDescription: "Expert van services in Dalry. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "kilwinning": {
+    name: "Kilwinning",
+    metaDescription: "Expert van services in Kilwinning. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "largs": {
+    name: "Largs",
+    metaDescription: "Expert van services in Largs. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "auchinleck": {
+    name: "Auchinleck",
+    metaDescription: "Expert van services in Auchinleck. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  },
+  "mauchline": {
+    name: "Mauchline",
+    metaDescription: "Expert van services in Mauchline. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire."
+  }
+};
+
+export async function getStaticPaths() {
+  const locations = [
+    'cumnock',
+    'ayr',
+    'kilmarnock',
+    'irvine',
+    'troon',
+    'prestwick',
+    'kirkconnel',
+    'sanquhar',
+    'mossblown',
+    'ardrossan',
+    'dreghorn',
+    'saltcoats',
+    'beith',
+    'stewarton',
+    'patna',
+    'dalmellington',
+    'maybole',
+    'newmilns',
+    'darvel',
+    'dalrymple',
+    'galston',
+    'girvan',
+    'dalry',
+    'kilwinning',
+    'largs',
+    'auchinleck',
+    'mauchline',
+  ];
+
+  return locations.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const location = locationData[slug || ''] || locationData['cumnock'];
+const locationSlug = slug || 'cumnock';
+---
+
+<BaseLayout
+  title={getLocationHubTitle(location.name, locationSlug)}
+  description={getLocationHubMeta(location.name, locationSlug)}
+  canonical={`https://chrisyourmanwithavan.com/locations/${slug}`}
+>
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://chrisyourmanwithavan.com/locations" },
+      { "@type": "ListItem", "position": 3, "name": location.name, "item": `https://chrisyourmanwithavan.com/locations/${slug}` }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": `Chris, Your Man with a Van — ${location.name}`,
+    "url": `https://chrisyourmanwithavan.com/locations/${slug}`,
+    "telephone": "+447735852822",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "77"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": location.name,
+      "containedInPlace": { "@type": "AdministrativeArea", "name": "Ayrshire" }
+    }
+  })} />
+
+  <LocationDetailComponent slug={slug} client:load />
+</BaseLayout>
+

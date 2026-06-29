@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ServicesComponent from '../pages/Services';
+import '../index.css';
+---
+
+<BaseLayout
+  title="Van Services Ayrshire | Removals, Courier & Waste"
+  description="Man with a van services in Ayrshire: small removals, courier, waste removal, flat-pack assembly. 77 Google reviews. SEPA registered. Free WhatsApp quotes."
+  keywords="van services ayrshire, small removals ayrshire, courier services ayrshire, house removals ayrshire, furniture removals ayrshire, waste removal ayrshire, delivery service ayrshire, in store collection and delivery ayrshire, flat pack assembly ayrshire, whatsapp quote van services, free quote man with a van, collection and delivery service ayrshire"
+  canonical="https://chrisyourmanwithavan.com/services"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://chrisyourmanwithavan.com/services" }
+    ]
+  })} />
+  <ServicesComponent client:load />
+</BaseLayout>
+
+

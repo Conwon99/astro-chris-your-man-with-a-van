@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ContactComponent from '../pages/Contact';
+import '../index.css';
+---
+
+<BaseLayout
+  title="Contact Chris | Free Quote | Man with a Van Ayrshire"
+  description="Contact Chris for van services across Ayrshire. Free quotes via WhatsApp, phone or Messenger. SEPA registered removals, courier & waste removal."
+  keywords="contact man with a van ayrshire, van services contact, get quote ayrshire, whatsapp quote, contact chris van services, removals quote ayrshire"
+  canonical="https://chrisyourmanwithavan.com/contact"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://chrisyourmanwithavan.com/contact" }
+    ]
+  })} />
+  <ContactComponent client:load />
+</BaseLayout>
+
+

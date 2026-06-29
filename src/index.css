@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Chris, Your Man with a Van - Website Design System
+Designed by Connor's Design Solutions - https://connorsdesignsolutions.com/
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Core brand colors - Professional Orange & Yellow Theme */
+    --sunshine-yellow: 51 85% 60%;      /* Softer yellow */
+    --bright-orange: 19 67% 49%;        /* #cf5e27 */
+    --primary-orange: 19 67% 49%;       /* #cf5e27 */
+    --dark-orange: 19 67% 39%;          /* Darker version of #cf5e27 */
+    --light-orange: 19 67% 59%;         /* Lighter version of #cf5e27 */
+    --asphalt-grey: 0 0% 18%;           /* #2F2F2F */
+    
+    /* Semantic tokens - Dark Theme */
+    --background: 0 0% 0%;              /* #000000 - Black background */
+    --foreground: 0 0% 100%;            /* #ffffff - White text */
+
+    --card: 0 0% 10%;                   /* Dark gray cards */
+    --card-foreground: 0 0% 100%;       /* White text on cards */
+
+    --popover: 0 0% 10%;                /* Dark gray popovers */
+    --popover-foreground: 0 0% 100%;    /* White text on popovers */
+
+    --primary: var(--primary-orange);
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: var(--sunshine-yellow);
+    --secondary-foreground: 0 0% 0%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 80%;
+
+    --accent: var(--dark-orange);
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: var(--primary-orange);
+
+    /* Hero button variant */
+    --hero-button: var(--primary-orange);
+    --hero-button-foreground: 0 0% 100%;
+    --hero-button-hover: var(--dark-orange);
+
+    /* Trust indicators */
+    --trust-bg: var(--primary-orange);
+    --trust-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--sunshine-yellow)), hsl(var(--light-orange)));
+    --gradient-services: linear-gradient(45deg, hsl(var(--primary-orange)), hsl(var(--sunshine-yellow)));
+    --gradient-cta: linear-gradient(135deg, hsl(var(--light-orange)), hsl(var(--dark-orange)));
+
+    /* Shadows */
+    --shadow-soft: 0 10px 30px -10px hsl(var(--primary-orange) / 0.3);
+    --shadow-glow: 0 0 30px hsl(var(--light-orange) / 0.4);
+    --shadow-card: 0 4px 20px hsl(var(--primary-orange) / 0.15);
+
+    --radius: 1rem;
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  html {
+    overflow-x: hidden;
+  }
+  
+  * {
+    max-width: 100%;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold;
+  }
+}
+
+@layer components {
+  .btn-hero {
+    @apply bg-[hsl(var(--hero-button))] text-[hsl(var(--hero-button-foreground))] hover:bg-[hsl(var(--hero-button-hover))] 
+           font-bold py-4 px-8 rounded-full shadow-[var(--shadow-glow)] transition-[var(--transition-bounce)] 
+           hover:scale-105 hover:shadow-xl;
+  }
+  
+  .card-service {
+    @apply bg-card rounded-3xl p-6 shadow-[var(--shadow-card)] hover:shadow-[var(--shadow-soft)] 
+           transition-[var(--transition-smooth)] overflow-hidden md:hover:scale-[1.02];
+  }
+  
+  .trust-badge {
+    @apply bg-[hsl(var(--trust-bg))] text-[hsl(var(--trust-foreground))] px-4 py-2 rounded-full 
+           font-semibold shadow-sm;
+  }
+  
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-services {
+    background: var(--gradient-services);
+  }
+  
+  .gradient-cta {
+    background: var(--gradient-cta);
+  }
+}
+
+@layer utilities {
+  /* Shimmer animation for flashy effects */
+  @keyframes shimmer {
+    0% {
+      transform: translateX(-100%) skewX(-12deg);
+    }
+    100% {
+      transform: translateX(200%) skewX(-12deg);
+    }
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  /* Gradient text animation */
+  @keyframes gradient {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 3s ease infinite;
+  }
+}

@@ -1,0 +1,81 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import LocationServiceDetailComponent from '../../../pages/LocationServiceDetail';
+import {
+  getLocationServiceStaticPaths,
+  getLocationServiceSEO,
+  getLocalizedFaqs,
+} from '../../../data/locationServices';
+import '../../../index.css';
+
+export async function getStaticPaths() {
+  return getLocationServiceStaticPaths();
+}
+
+const { location, service } = Astro.params;
+const seo = getLocationServiceSEO(location || '', service || '');
+
+if (!seo) {
+  return Astro.redirect('/404');
+}
+
+const faqs = getLocalizedFaqs(seo.location.name, seo.service.slug);
+---
+
+<BaseLayout
+  title={seo.title}
+  description={seo.description}
+  canonical={seo.canonical}
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://chrisyourmanwithavan.com/locations" },
+      { "@type": "ListItem", "position": 3, "name": seo.location.name, "item": `https://chrisyourmanwithavan.com/locations/${location}` },
+      { "@type": "ListItem", "position": 4, "name": seo.service.title, "item": seo.canonical }
+    ]
+  })} />
+
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": `${seo.service.title} in ${seo.location.name}`,
+    "serviceType": seo.service.title,
+    "description": seo.description,
+    "url": seo.canonical,
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Chris, Your Man with a Van",
+      "url": "https://chrisyourmanwithavan.com/",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "77"
+      }
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": seo.location.name,
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    }
+  })} />
+
+  {faqs.length > 0 && (
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": faqs.map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": { "@type": "Answer", "text": faq.answer }
+      }))
+    })} />
+  )}
+
+  <LocationServiceDetailComponent locationSlug={location} serviceSlug={service} client:load />
+</BaseLayout>

@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import ServiceDetailComponent from '../../pages/ServiceDetail';
+import '../../index.css';
+
+// Service data mapping for SEO metadata
+const serviceData: Record<string, { title: string; metaDescription: string }> = {
+  "small-removals": {
+    title: "Small Removals & House Moves",
+    metaDescription: "Professional small removals & house moves in Ayrshire. House, furniture & office relocations. SEPA registered. Free WhatsApp quotes."
+  },
+  "courier": {
+    title: "Courier Services & Delivery",
+    metaDescription: "Reliable courier & delivery across Ayrshire & UK. Same-day service available. Secure transport, professional service. Free quotes."
+  },
+  "waste-removal": {
+    title: "Tip Runs & Waste Removal",
+    metaDescription: "SEPA registered waste removal & tip runs in Ayrshire. Professional disposal of household & garden waste. Eco-friendly & legal. Free quotes."
+  },
+  "collection-and-delivery": {
+    title: "In-Store Collection & Delivery",
+    metaDescription: "Furniture store collection & delivery in Ayrshire. Same-day service, careful handling. White glove service. Free quotes via WhatsApp."
+  },
+  "end-of-tenancy": {
+    title: "End of Tenancy Clearance",
+    metaDescription: "End of tenancy clearance across Ayrshire. Tenants & landlords. Furniture removal, rubbish disposal. SEPA registered. Free WhatsApp quotes."
+  },
+  "flat-pack-assembly": {
+    title: "Flat Pack Assembly",
+    metaDescription: "Professional flat pack assembly in Ayrshire. IKEA & all major brands. Tools provided, expert assembly, same-day service. Quality guarantee."
+  }
+};
+
+export async function getStaticPaths() {
+  const services = [
+    'small-removals',
+    'courier',
+    'waste-removal',
+    'collection-and-delivery',
+    'end-of-tenancy',
+    'flat-pack-assembly',
+  ];
+
+  return services.map((slug) => ({
+    params: { slug },
+  }));
+}
+
+const { slug } = Astro.params;
+const service = serviceData[slug || ''] || serviceData['small-removals'];
+---
+
+<BaseLayout
+  title={`${service.title} | Chris, Your Man with a Van`}
+  description={service.metaDescription}
+  canonical={`https://chrisyourmanwithavan.com/services/${slug}`}
+>
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://chrisyourmanwithavan.com/services" },
+      { "@type": "ListItem", "position": 3, "name": service.title, "item": `https://chrisyourmanwithavan.com/services/${slug}` }
+    ]
+  })} />
+
+  <!-- Service schema -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.metaDescription,
+    "serviceType": service.title,
+    "areaServed": { "@type": "AdministrativeArea", "name": "Ayrshire" },
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Chris, Your Man with a Van",
+      "url": "https://chrisyourmanwithavan.com/",
+      "telephone": "+447735852822",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "77"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": "GBP",
+      "availability": "https://schema.org/InStock",
+      "url": `https://chrisyourmanwithavan.com/services/${slug}`
+    },
+    "url": `https://chrisyourmanwithavan.com/services/${slug}`
+  })} />
+
+  <ServiceDetailComponent slug={slug} client:load />
+</BaseLayout>
+

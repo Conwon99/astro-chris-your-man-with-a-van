@@ -1,0 +1,89 @@
+INTERNAL LINK EQUITY FLOW MAP
+================================
+
+🏠 HOMEPAGE (100% Link Equity)
+│
+├── 📊 SERVICE PAGES (40% total)
+│   ├── 🌳 Tree Surgery (/tree-surgery) ← 15%
+│   │   ├── → Lawn Mowing (/lawn-mowing)
+│   │   ├── → Hedge Cutting (/hedge-cutting)
+│   │   ├── → Troon (/troon)
+│   │   └── → Ayrshire (/ayrshire)
+│   │
+│   ├── 🌱 Lawn Mowing (/lawn-mowing) ← 12%
+│   │   ├── → Tree Surgery (/tree-surgery)
+│   │   ├── → Hedge Cutting (/hedge-cutting)
+│   │   ├── → Landscaping (/landscaping)
+│   │   └── → Troon (/troon)
+│   │
+│   ├── ✂️ Hedge Cutting (/hedge-cutting) ← 8%
+│   │   ├── → Tree Surgery (/tree-surgery)
+│   │   ├── → Lawn Mowing (/lawn-mowing)
+│   │   └── → Prestwick (/prestwick)
+│   │
+│   └── 🏡 Landscaping (/landscaping) ← 5%
+│       ├── → Tree Surgery (/tree-surgery)
+│       ├── → Lawn Mowing (/lawn-mowing)
+│       └── → Ayrshire (/ayrshire)
+│
+├── 📍 LOCATION PAGES (30% total)
+│   ├── 🏖️ Troon (/troon) ← 12%
+│   │   ├── → Tree Surgery (/tree-surgery)
+│   │   ├── → Lawn Mowing (/lawn-mowing)
+│   │   ├── → Hedge Cutting (/hedge-cutting)
+│   │   └── → Blog (/blog)
+│   │
+│   ├── ✈️ Prestwick (/prestwick) ← 10%
+│   │   ├── → Tree Surgery (/tree-surgery)
+│   │   ├── → Lawn Mowing (/lawn-mowing)
+│   │   ├── → Hedge Cutting (/hedge-cutting)
+│   │   └── → Blog (/blog)
+│   │
+│   └── 🏴󠁧󠁢󠁳󠁣󠁴󠁿 Ayrshire (/ayrshire) ← 8%
+│       ├── → Tree Surgery (/tree-surgery)
+│       ├── → Lawn Mowing (/lawn-mowing)
+│       ├── → Landscaping (/landscaping)
+│       └── → Blog (/blog)
+│
+└── 📝 BLOG CONTENT (15% total)
+    ├── 📖 Blog Home (/blog) ← 5%
+    │   ├── → Tree Surgery (/tree-surgery)
+    │   ├── → Lawn Mowing (/lawn-mowing)
+    │   ├── → Troon (/troon)
+    │   └── → Ayrshire (/ayrshire)
+    │
+    └── 📄 Individual Posts (/blog/[slug]) ← 10%
+        ├── → Relevant Service Pages
+        ├── → Relevant Location Pages
+        └── → Homepage
+
+🔄 CROSS-LINKING (15% total)
+├── Service ↔ Service (8%)
+├── Location ↔ Service (4%)
+└── Blog → Service/Location (3%)
+
+LINK EQUITY FLOW SUMMARY:
+========================
+Homepage → Services: 40%
+Homepage → Locations: 30%
+Homepage → Blog: 15%
+Cross-linking: 15%
+
+ANCHOR TEXT STRATEGY:
+====================
+Primary Keyword: "Professional garden services in Troon & Ayrshire"
+
+Variations Used:
+- "Professional garden services in Troon & Ayrshire" (Homepage)
+- "Expert garden services across Troon and Ayrshire" (Service pages)
+- "Professional gardening services in Troon & Ayrshire" (Location pages)
+- "Qualified garden services in Troon & Ayrshire" (Blog posts)
+- "Professional tree surgeon and gardener in Troon & Ayrshire" (About section)
+
+IMPLEMENTATION PRIORITY:
+=======================
+1. Homepage service links (Above the fold)
+2. Service page cross-links
+3. Location page service links
+4. Blog content integration
+5. Cross-linking optimization

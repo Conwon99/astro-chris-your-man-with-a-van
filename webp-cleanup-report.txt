@@ -1,0 +1,184 @@
+WEBP CLEANUP REPORT
+====================================================================================================
+Generated: 2025-10-29T22:05:08.134Z
+Total WebP Files: 37
+Deleted: 16
+Kept: 21
+Total Size Freed: 12.48 MB
+Total Space Saved: 10.56 MB
+
+
+DELETED FILES (WebP was larger):
+----------------------------------------------------------------------------------------------------
+public/back1.webp
+  Original: 1.76 MB
+  WebP: 2.8 MB (+1.04 MB)
+
+public/background.webp
+  Original: 103.75 KB
+  WebP: 126.25 KB (+22.51 KB)
+
+public/dog.webp
+  Original: 1.53 MB
+  WebP: 2.4 MB (+886.4 KB)
+
+public/lovable-uploads/hedge.webp
+  Original: 664.81 KB
+  WebP: 787.01 KB (+122.2 KB)
+
+public/lovable-uploads/hedge2.webp
+  Original: 613.01 KB
+  WebP: 722.95 KB (+109.94 KB)
+
+public/lovable-uploads/hero.webp
+  Original: 110.24 KB
+  WebP: 195.84 KB (+85.6 KB)
+
+public/lovable-uploads/lawnmower.webp
+  Original: 451.96 KB
+  WebP: 554.23 KB (+102.27 KB)
+
+public/lovable-uploads/project1.webp
+  Original: 335.4 KB
+  WebP: 390.26 KB (+54.85 KB)
+
+public/lovable-uploads/project3.webp
+  Original: 347.74 KB
+  WebP: 403.58 KB (+55.84 KB)
+
+public/services/in person delivery.webp
+  Original: 561.19 KB
+  WebP: 711.25 KB (+150.05 KB)
+
+public/vanfront.webp
+  Original: 591.15 KB
+  WebP: 656.57 KB (+65.42 KB)
+
+public/vanimg.webp
+  Original: 1.28 MB
+  WebP: 1.91 MB (+642.09 KB)
+
+src/assets/hero-garden.webp
+  Original: 336.82 KB
+  WebP: 361.04 KB (+24.22 KB)
+
+src/assets/service-clearouts.webp
+  Original: 231.5 KB
+  WebP: 283.65 KB (+52.16 KB)
+
+src/assets/service-gardening.webp
+  Original: 150.41 KB
+  WebP: 172.49 KB (+22.07 KB)
+
+src/assets/service-tree-work.webp
+  Original: 129.77 KB
+  WebP: 138.39 KB (+8.62 KB)
+
+
+KEPT FILES (WebP is smaller):
+----------------------------------------------------------------------------------------------------
+public/chrisback.webp
+  Original: 2.41 MB
+  WebP: 59.28 KB
+  Savings: 2.35 MB (97.6%)
+
+public/lovable-uploads/261430b9-3f76-4615-bc01-41659d58a82f.webp
+  Original: 1.56 MB
+  WebP: 174.88 KB
+  Savings: 1.39 MB (89.0%)
+
+public/chris.webp
+  Original: 1.28 MB
+  WebP: 70.61 KB
+  Savings: 1.21 MB (94.6%)
+
+public/1.webp
+  Original: 991.42 KB
+  WebP: 121.4 KB
+  Savings: 870.02 KB (87.8%)
+
+public/lovable-uploads/3eec67ad-e7bc-4af0-b6fd-3453d660c296.webp
+  Original: 895.31 KB
+  WebP: 89.29 KB
+  Savings: 806.03 KB (90.0%)
+
+public/vanv3.webp
+  Original: 818.73 KB
+  WebP: 17.77 KB
+  Savings: 800.96 KB (97.8%)
+
+public/lovable-uploads/5314906b-f385-471d-9ac6-f3b6a8c923f5.webp
+  Original: 781.43 KB
+  WebP: 59.51 KB
+  Savings: 721.92 KB (92.4%)
+
+public/t.webp
+  Original: 819.71 KB
+  WebP: 101.63 KB
+  Savings: 718.09 KB (87.6%)
+
+public/2.webp
+  Original: 519.22 KB
+  WebP: 54.02 KB
+  Savings: 465.2 KB (89.6%)
+
+public/lovable-uploads/garden1.webp
+  Original: 1.35 MB
+  WebP: 965.83 KB
+  Savings: 420.43 KB (30.3%)
+
+public/houseback.webp
+  Original: 1015.77 KB
+  WebP: 696.59 KB
+  Savings: 319.18 KB (31.4%)
+
+public/services/removals.webp
+  Original: 518.12 KB
+  WebP: 319.28 KB
+  Savings: 198.84 KB (38.4%)
+
+public/services/endtenancy.webp
+  Original: 261.81 KB
+  WebP: 173.55 KB
+  Savings: 88.26 KB (33.7%)
+
+public/vanlogo.webp
+  Original: 123.44 KB
+  WebP: 35.96 KB
+  Savings: 87.49 KB (70.9%)
+
+public/Van logo edit.webp
+  Original: 103.05 KB
+  WebP: 35.27 KB
+  Savings: 67.78 KB (65.8%)
+
+public/website_background_full.webp
+  Original: 129.24 KB
+  WebP: 69.98 KB
+  Savings: 59.25 KB (45.8%)
+
+public/services/delivery.webp
+  Original: 501.9 KB
+  WebP: 457.23 KB
+  Savings: 44.68 KB (8.9%)
+
+public/lovable-uploads/Lowe-Maintenance-City-Guilds-NPTC-Qualifications.webp
+  Original: 79.45 KB
+  WebP: 37.1 KB
+  Savings: 42.34 KB (53.3%)
+
+public/services/tiprun.webp
+  Original: 543.4 KB
+  WebP: 519.08 KB
+  Savings: 24.32 KB (4.5%)
+
+public/lovable-uploads/treecutting.webp
+  Original: 190.26 KB
+  WebP: 177.87 KB
+  Savings: 12.39 KB (6.5%)
+
+src/assets/service-fencing.webp
+  Original: 126.59 KB
+  WebP: 124.51 KB
+  Savings: 2.08 KB (1.6%)
+

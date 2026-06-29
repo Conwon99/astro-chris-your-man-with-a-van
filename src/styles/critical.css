@@ -1,0 +1,110 @@
+/* Critical CSS - Above the fold styles */
+/* This CSS is inlined in the HTML head to eliminate render-blocking */
+
+/* CSS Variables - Critical */
+:root {
+  --sunshine-yellow: 51 85% 60%;
+  --primary-orange: 19 67% 49%;
+  --dark-orange: 19 67% 39%;
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 10%;
+  --card-foreground: 0 0% 100%;
+  --primary: 19 67% 49%;
+  --primary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 80%;
+  --border: 0 0% 20%;
+  --radius: 1rem;
+}
+
+/* Reset & Base */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+html {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Navigation - Critical (above fold) */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+  transition: all 0.3s ease-in-out;
+}
+
+nav.scrolled {
+  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section - Critical */
+#hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Loading state */
+#root {
+  min-height: 100vh;
+}
+
+/* Prevent layout shift */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Font loading optimization */
+@font-face {
+  font-family: 'Outfit';
+  font-display: swap;
+  font-weight: 400 800;
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-display: swap;
+  font-weight: 400 700;
+}
+
+/* Critical button styles */
+button {
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* Prevent flash of unstyled content */
+.font-display {
+  font-family: 'Outfit', system-ui, sans-serif;
+}
+
+font-sans {
+  font-family: 'Poppins', system-ui, sans-serif;
+}
+

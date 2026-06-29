@@ -1,0 +1,374 @@
+{
+  "summary": {
+    "total_urls": 89,
+    "html_pages": 36,
+    "thin_content_pages": 0,
+    "duplicate_titles": 0,
+    "duplicate_meta_descriptions": 0,
+    "high_outlink_pages": 0,
+    "orphaned_pages": 35,
+    "low_inlink_pages": 0,
+    "temp_redirects": 0,
+    "slow_redirects": 13,
+    "404_errors": 0,
+    "missing_meta_descriptions": 0,
+    "too_short_meta_descriptions": 0,
+    "too_long_meta_descriptions": 20
+  },
+  "thin_content": [],
+  "duplicate_titles": {},
+  "duplicate_meta_descriptions": {},
+  "high_outlinks": [],
+  "orphaned_pages": [
+    {
+      "url": "",
+      "title": "Service Locations | Ayrshire Coverage | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "In-Store Collection & Delivery | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Van Services Ayrshire | Small Removals, Courier & Waste Removal | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Courier Services & Delivery | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Flat Pack Assembly | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "End-of-Tenancy Clearance | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Tip Runs & Waste Removal | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Small Removals & House Moves | Chris, Your Man with a Van",
+      "crawl_depth": "2"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Largs | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Mossblown | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Auchinleck | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Mauchline | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Sanquhar | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Ayr | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Kilwinning | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Troon | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Dalry | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Girvan | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Newmilns | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Galston | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Darvel | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Kilmarnock | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Dalrymple | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Maybole | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Patna | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Cumnock | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Dalmellington | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Irvine | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Stewarton | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Prestwick | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Beith | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Saltcoats | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Dreghorn | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Ardrossan | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    },
+    {
+      "url": "",
+      "title": "Van Services in Kirkconnel | Chris, Your Man with a Van",
+      "crawl_depth": "4"
+    }
+  ],
+  "low_inlinks": [],
+  "temp_redirects": [],
+  "slow_redirects": [
+    {
+      "url": "",
+      "response_time": 0.607,
+      "redirect_url": ""
+    },
+    {
+      "url": "",
+      "response_time": 0.503,
+      "redirect_url": ""
+    },
+    {
+      "url": "",
+      "response_time": 0.549,
+      "redirect_url": ""
+    },
+    {
+      "url": "",
+      "response_time": 0.704,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/beith/"
+    },
+    {
+      "url": "",
+      "response_time": 0.573,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/stewarton/"
+    },
+    {
+      "url": "",
+      "response_time": 0.754,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/prestwick/"
+    },
+    {
+      "url": "",
+      "response_time": 0.526,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/irvine/"
+    },
+    {
+      "url": "",
+      "response_time": 0.541,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/cumnock/"
+    },
+    {
+      "url": "",
+      "response_time": 0.531,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/sanquhar/"
+    },
+    {
+      "url": "",
+      "response_time": 0.522,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/largs/"
+    },
+    {
+      "url": "",
+      "response_time": 0.527,
+      "redirect_url": "https://chrisyourmanwithavan.com/locations/auchinleck/"
+    },
+    {
+      "url": "",
+      "response_time": 0.544,
+      "redirect_url": ""
+    },
+    {
+      "url": "",
+      "response_time": 0.504,
+      "redirect_url": ""
+    }
+  ],
+  "404_errors": [],
+  "missing_meta_descriptions": [],
+  "too_short_meta_descriptions": [],
+  "too_long_meta_descriptions": [
+    {
+      "url": "",
+      "length": 175,
+      "meta_desc": "Collection from furniture stores and delivery to your door in Ayrshire. Online purchase delivery, same-day service available, careful handling guaranteed. White glove service."
+    },
+    {
+      "url": "",
+      "length": 225,
+      "meta_desc": "Professional van services in Ayrshire: small removals, courier services, house removals, furniture removals, waste removal, delivery service, in-store collection, flat pack assembly. SEPA registered. Free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 167,
+      "meta_desc": "Reliable courier and delivery services across Ayrshire and throughout the UK. Same-day service available for urgent deliveries. Secure transport, professional service."
+    },
+    {
+      "url": "",
+      "length": 176,
+      "meta_desc": "Professional flat pack furniture assembly service in Ayrshire. IKEA furniture, all major brands. Tools provided, expert assembly, same-day service available. Quality guarantee."
+    },
+    {
+      "url": "",
+      "length": 180,
+      "meta_desc": "Complete property clearance for tenants and landlords in Ayrshire. Fast, thorough service to get properties ready for the next tenant. Furniture removal and deep clean preparation."
+    },
+    {
+      "url": "",
+      "length": 172,
+      "meta_desc": "SEPA registered waste removal and tip run services in Ayrshire. Professional disposal of household waste, garden waste, and unwanted items. Eco-friendly and legal disposal."
+    },
+    {
+      "url": "",
+      "length": 170,
+      "meta_desc": "Professional small removals and house moves in Ayrshire. House removals, furniture removals, office relocations, student moves. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Mossblown, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 162,
+      "meta_desc": "Professional van services in Auchinleck, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Mauchline, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 173,
+      "meta_desc": "Professional van services in Sanquhar, Dumfries and Galloway. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 162,
+      "meta_desc": "Professional van services in Kilwinning, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 162,
+      "meta_desc": "Professional van services in Kilmarnock, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Dalrymple, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 165,
+      "meta_desc": "Professional van services in Dalmellington, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Stewarton, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Prestwick, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Saltcoats, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 161,
+      "meta_desc": "Professional van services in Ardrossan, Ayrshire. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    },
+    {
+      "url": "",
+      "length": 175,
+      "meta_desc": "Professional van services in Kirkconnel, Dumfries and Galloway. Small removals, courier services, waste removal, flat-pack assembly. SEPA registered, free quotes via WhatsApp."
+    }
+  ],
+  "duplicate_meta_descriptions_list": []
+}

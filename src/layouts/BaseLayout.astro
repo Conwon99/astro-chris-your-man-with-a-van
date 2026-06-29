@@ -1,0 +1,350 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  keywords?: string;
+  canonical?: string;
+  ogImage?: string;
+  robots?: string;
+}
+
+import StickyContact from '../components/StickyContact';
+
+const {
+  title,
+  description,
+  keywords = "man with van cumnock, van services ayrshire, small removals cumnock, courier services ayrshire, waste removal cumnock, tip runs ayrshire, flat pack assembly cumnock, delivery services ayrshire, house moves cumnock, furniture delivery ayrshire",
+  canonical = "https://chrisyourmanwithavan.com/",
+  ogImage = "https://chrisyourmanwithavan.com/vanlogo.png",
+  robots = "index, follow",
+} = Astro.props;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "MovingCompany"],
+  "name": "Chris, Your Man with a Van",
+  "alternateName": "Chris Van Services",
+  "description": "Professional van services serving Cumnock and surrounding Ayrshire areas. Expert small removals, courier services, tip runs, waste removal, flat-pack assembly & in-store collection & delivery. SEPA registered, 5-star service.",
+  "url": "https://chrisyourmanwithavan.com/",
+  "telephone": "+447735852822",
+  "email": "WhatsApp: 07735 852822",
+  "foundingDate": "2020",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Cumnock",
+    "addressRegion": "Ayrshire",
+    "addressCountry": "Scotland",
+    "postalCode": "KA18 1"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "55.4544",
+    "longitude": "-4.2644"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Cumnock",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Ayr",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Kilmarnock",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Irvine",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Troon",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "City",
+      "name": "Prestwick",
+      "containedInPlace": {
+        "@type": "AdministrativeArea",
+        "name": "Ayrshire"
+      }
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Ayrshire",
+      "containedInPlace": {
+        "@type": "Country",
+        "name": "Scotland"
+      }
+    },
+    {
+      "@type": "Country",
+      "name": "United Kingdom",
+      "description": "Courier services available across the UK"
+    }
+  ],
+  "serviceType": [
+    "Small Removals",
+    "House Moves",
+    "Office Relocations",
+    "Furniture Transport",
+    "Courier Services",
+    "Same-Day Delivery",
+    "Package Delivery",
+    "Waste Removal",
+    "Tip Runs",
+    "Garage Clearance",
+    "Shed Clearance",
+    "Garden Waste Removal",
+    "In-Store Collection",
+    "Furniture Delivery",
+    "End-of-Tenancy Clearance",
+    "Property Clearance",
+    "Flat Pack Assembly",
+    "IKEA Assembly",
+    "Furniture Assembly",
+    "White Glove Delivery"
+  ],
+  "openingHours": [
+    "Mo 00:00-23:59",
+    "Tu 00:00-23:59",
+    "We 00:00-23:59",
+    "Th 00:00-23:59",
+    "Fr 00:00-23:59",
+    "Sa 00:00-23:59",
+    "Su 00:00-23:59"
+  ],
+  "priceRange": "$$",
+  "image": [
+    "https://chrisyourmanwithavan.com/t.png",
+    "https://chrisyourmanwithavan.com/chris.png"
+  ],
+  "logo": "https://chrisyourmanwithavan.com/vanlogo.png",
+  "sameAs": [
+    "https://www.facebook.com/chrisyourmanwithavankilmarnock",
+    "https://g.page/r/CTXFEt51p7p3EBM"
+  ],
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "SEPA Waste Carrier Registration",
+      "description": "SEPA registered for legal waste disposal and tip runs",
+      "credentialCategory": "certification",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Scottish Environment Protection Agency"
+      }
+    },
+    {
+      "@type": "EducationalOccupationalCredential",
+      "name": "Public Liability Insurance",
+      "description": "Fully insured for all van services and removals work",
+      "credentialCategory": "insurance",
+      "recognizedBy": {
+        "@type": "Organization",
+        "name": "Insurance Provider"
+      }
+    }
+  ],
+  "employee": {
+    "@type": "Person",
+    "name": "Chris",
+    "jobTitle": "Van Services & Removals",
+    "description": "Professional van services operator with SEPA registration and 5-star service record"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "77",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Chris, Your Man with a Van" />
+    <meta name="keywords" content={keywords} />
+    <meta name="robots" content={robots} />
+    <meta name="language" content="English" />
+    <meta name="geo.region" content="GB-AYS" />
+    <meta name="geo.placename" content="Cumnock, Ayrshire, Scotland" />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href={canonical} />
+    
+    <!-- Hreflang for UK targeting -->
+    <link rel="alternate" hreflang="en-gb" href={canonical} />
+    <link rel="alternate" hreflang="en" href={canonical} />
+    <link rel="alternate" hreflang="x-default" href={canonical} />
+    
+    <!-- Structured Data - LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    
+    <!-- Structured Data - Organization (for Google Site Icon) -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Chris, Your Man with a Van",
+      "url": "https://chrisyourmanwithavan.com/",
+      "logo": "https://chrisyourmanwithavan.com/vanlogo.png",
+      "sameAs": [
+        "https://www.facebook.com/chrisyourmanwithavankilmarnock",
+        "https://g.page/r/CTXFEt51p7p3EBM"
+      ]
+    })} />
+    
+    <!-- Favicon - Using vanlogo as site icon for Google Search -->
+    <!-- Primary icon - must be at least 112x112px for Google -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="shortcut icon" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <link rel="mask-icon" href="https://chrisyourmanwithavan.com/vanlogo.png" color="#C4691F" />
+    <meta name="msapplication-TileImage" content="https://chrisyourmanwithavan.com/vanlogo.png" />
+    <meta name="msapplication-TileColor" content="#C4691F" />
+    <meta name="theme-color" content="#C4691F" />
+    
+    <!-- Critical CSS - Inlined -->
+    <style id="critical-css" is:inline>
+      :root{--sunshine-yellow:51 85% 60%;--primary-orange:19 67% 49%;--dark-orange:19 67% 39%;--background:0 0% 0%;--foreground:0 0% 100%;--card:0 0% 10%;--card-foreground:0 0% 100%;--primary:19 67% 49%;--primary-foreground:0 0% 100%;--muted:0 0% 15%;--muted-foreground:0 0% 80%;--border:0 0% 20%;--radius:1rem}*{box-sizing:border-box;margin:0;padding:0;border:0}html{overflow-x:hidden;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}body{margin:0;padding:0;background-color:hsl(var(--background));color:hsl(var(--foreground));font-family:system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif;line-height:1.5;overflow-x:hidden;-webkit-overflow-scrolling:touch}nav{position:fixed;top:0;width:100%;z-index:50;transition:all .3s ease-in-out}#hero{min-height:100vh;position:relative;display:flex;align-items:center;background-color:#000;overflow:hidden}#root{min-height:100vh}img{max-width:100%;height:auto;display:block}button{cursor:pointer;font-family:inherit}.font-display{font-family:'Outfit',system-ui,sans-serif}
+    </style>
+
+    <!-- Preconnect to external domains early -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="/back1.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="/vanlogo.webp" as="image" type="image/webp" fetchpriority="high" />
+    <link rel="preload" href="/vanlogo.png" as="image" type="image/png" fetchpriority="high" />
+    
+    <!-- Defer non-critical CSS - Google Fonts -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" as="style" />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Preconnect to main domain for faster resource loading -->
+    <link rel="dns-prefetch" href="https://chrisyourmanwithavan.com" />
+    <link rel="preconnect" href="https://chrisyourmanwithavan.com" crossorigin />
+    
+    <!-- Preconnect to Google Maps API -->
+    <link rel="dns-prefetch" href="https://maps.googleapis.com" />
+    <link rel="preconnect" href="https://maps.googleapis.com" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:site_name" content="Chris, Your Man with a Van" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
+    <!-- Meta Pixel Code -->
+    <script is:inline>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '24850345264644281');
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none"
+           src="https://www.facebook.com/tr?id=24850345264644281&ev=PageView&noscript=1"
+           alt="" />
+    </noscript>
+    <!-- End Meta Pixel Code -->
+  </head>
+
+  <body>
+    <slot />
+    <StickyContact client:load />
+    
+    <!-- Analytics Scripts - Initialize immediately for event tracking -->
+    <script is:inline>
+      // Initialize dataLayer and gtag immediately so events can be tracked
+      // even before Google Analytics scripts load
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      window.gtag = gtag;
+      
+      // Initialize Google Analytics configs immediately
+      gtag('js', new Date());
+      gtag('config', 'G-V7YSJ55C9T');
+      gtag('config', 'G-L1XB9GKZ7E');
+
+      // Load analytics scripts after page load
+      window.addEventListener('load', function() {
+        // Google Analytics - load scripts
+        const script1 = document.createElement('script');
+        script1.async = true;
+        script1.src = 'https://www.googletagmanager.com/gtag/js?id=G-V7YSJ55C9T';
+        document.head.appendChild(script1);
+
+        const script2 = document.createElement('script');
+        script2.async = true;
+        script2.src = 'https://www.googletagmanager.com/gtag/js?id=G-L1XB9GKZ7E';
+        document.head.appendChild(script2);
+
+        // RevuCapture Analytics - defer
+        const revuScript = document.createElement('script');
+        revuScript.src = '/simple-tracker.js';
+        revuScript.setAttribute('data-website-id', 'chris-van-services');
+        revuScript.async = true;
+        document.head.appendChild(revuScript);
+      });
+    </script>
+  </body>
+</html>
+
+

@@ -1,0 +1,34 @@
+# Robots.txt for Chris, Your Man with a Van
+# https://chrisyourmanwithavan.com/
+
+User-agent: *
+Allow: /
+
+# Block access to admin and private areas (if any)
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Allow all search engines to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Social media crawlers
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Sitemap location
+Sitemap: https://chrisyourmanwithavan.com/sitemap.xml

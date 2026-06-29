@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LocationsComponent from '../pages/Locations';
+import '../index.css';
+---
+
+<BaseLayout
+  title="Service Locations Ayrshire | Chris, Your Man with a Van"
+  description="Professional van services available across Ayrshire. Service areas include Cumnock, Ayr, Kilmarnock, Irvine, Troon, Prestwick and surrounding areas."
+  canonical="https://chrisyourmanwithavan.com/locations"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://chrisyourmanwithavan.com/locations" }
+    ]
+  })} />
+  <LocationsComponent client:load />
+</BaseLayout>
+
+

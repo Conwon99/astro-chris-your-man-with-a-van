@@ -1,0 +1,54 @@
+WEBP CONVERSION REPORT
+====================================================================================================
+Generated: 2025-10-29T22:01:41.006Z
+Total Images: 37
+Successfully Converted: 25
+Already Existed: 12
+Failed: 0
+
+Total Original Size: 23.91 MB
+Total WebP Size: 16.73 MB
+Total Space Saved: 7.17 MB (30.0%)
+
+
+BEFORE/AFTER COMPARISON:
+----------------------------------------------------------------------------------------------------
+File                                                               Original           WebP        Savings
+----------------------------------------------------------------------------------------------------
+public/chrisback.png                                                2.41 MB       59.28 KB2.35 MB (97.6%)
+public/back1.jpg                                                    1.76 MB         2.8 MBNaN undefined (-59.2%)
+...ovable-uploads/261430b9-3f76-4615-bc01-41659d58a82f.png          1.56 MB      174.88 KB         EXISTS
+public/dog.jpg                                                      1.53 MB         2.4 MBNaN undefined (-56.6%)
+public/lovable-uploads/garden1.jpg                                  1.35 MB      965.83 KB         EXISTS
+public/chris.png                                                    1.28 MB       70.61 KB1.21 MB (94.6%)
+public/vanimg.jpg                                                   1.28 MB        1.91 MBNaN undefined (-49.0%)
+public/houseback.jpg                                             1015.77 KB      696.59 KB319.18 KB (31.4%)
+public/1.png                                                      991.42 KB       121.4 KB870.02 KB (87.8%)
+...ovable-uploads/3eec67ad-e7bc-4af0-b6fd-3453d660c296.png        895.31 KB       89.29 KB         EXISTS
+public/t.png                                                      819.71 KB      101.63 KB718.09 KB (87.6%)
+public/vanv3.png                                                  818.73 KB       17.77 KB800.96 KB (97.8%)
+...ovable-uploads/5314906b-f385-471d-9ac6-f3b6a8c923f5.png        781.43 KB       59.51 KB         EXISTS
+public/lovable-uploads/hedge.jpg                                  664.81 KB      787.01 KB         EXISTS
+public/lovable-uploads/hedge2.jpg                                 613.01 KB      722.95 KB         EXISTS
+public/vanfront.jpg                                               591.15 KB      656.57 KBNaN undefined (-11.1%)
+public/services/in person delivery.jpg                            561.19 KB      711.25 KBNaN undefined (-26.7%)
+public/services/tiprun.jpg                                         543.4 KB      519.08 KB24.32 KB (4.5%)
+public/2.png                                                      519.22 KB       54.02 KB465.2 KB (89.6%)
+public/services/removals.jpg                                      518.12 KB      319.28 KB198.84 KB (38.4%)
+public/services/delivery.jpg                                       501.9 KB      457.23 KB44.68 KB (8.9%)
+public/lovable-uploads/lawnmower.jpg                              451.96 KB      554.23 KB         EXISTS
+public/lovable-uploads/project3.jpg                               347.74 KB      403.58 KB         EXISTS
+src/assets/hero-garden.jpg                                        336.82 KB      361.04 KBNaN undefined (-7.2%)
+public/lovable-uploads/project1.jpg                                335.4 KB      390.26 KB         EXISTS
+public/services/endtenancy.jpg                                    261.81 KB      173.55 KB88.26 KB (33.7%)
+src/assets/service-clearouts.jpg                                   231.5 KB      283.65 KBNaN undefined (-22.5%)
+public/lovable-uploads/treecutting.jpg                            190.26 KB      177.87 KB         EXISTS
+src/assets/service-gardening.jpg                                  150.41 KB      172.49 KBNaN undefined (-14.7%)
+src/assets/service-tree-work.jpg                                  129.77 KB      138.39 KBNaN undefined (-6.6%)
+public/website_background_full.jpg                                129.24 KB       69.98 KB59.25 KB (45.8%)
+src/assets/service-fencing.jpg                                    126.59 KB      124.51 KB 2.08 KB (1.6%)
+public/vanlogo.png                                                123.44 KB       35.96 KB87.49 KB (70.9%)
+public/lovable-uploads/hero.jpg                                   110.24 KB      195.84 KB         EXISTS
+public/background.jpg                                             103.75 KB      126.25 KBNaN undefined (-21.7%)
+public/Van logo edit.png                                          103.05 KB       35.27 KB67.78 KB (65.8%)
+...ds/Lowe-Maintenance-City-Guilds-NPTC-Qualifications.jpg         79.45 KB        37.1 KB         EXISTS

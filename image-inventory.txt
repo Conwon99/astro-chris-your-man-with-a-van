@@ -1,0 +1,89 @@
+IMAGE FILE INVENTORY
+================================================================================
+Generated: 2025-10-29T22:01:47.692Z
+Total Images: 80
+Total Size: 41.41 MB
+
+
+ALL IMAGES (sorted by size, largest first):
+--------------------------------------------------------------------------------
+public/back1.webp                                                          2.8 MB
+public/chrisback.png                                                      2.41 MB
+public/dog.webp                                                            2.4 MB
+public/vanimg.webp                                                        1.91 MB
+public/back1.jpg                                                          1.76 MB
+public/lovable-uploads/261430b9-3f76-4615-bc01-41659d58a82f.png           1.56 MB
+public/dog.jpg                                                            1.53 MB
+public/lovable-uploads/garden1.jpg                                        1.35 MB
+public/chris.png                                                          1.28 MB
+public/vanimg.jpg                                                         1.28 MB
+public/houseback.jpg                                                   1015.77 KB
+public/1.png                                                            991.42 KB
+public/lovable-uploads/garden1.webp                                     965.83 KB
+public/lovable-uploads/3eec67ad-e7bc-4af0-b6fd-3453d660c296.png         895.31 KB
+public/t.png                                                            819.71 KB
+public/vanv3.png                                                        818.73 KB
+public/lovable-uploads/hedge.webp                                       787.01 KB
+public/lovable-uploads/5314906b-f385-471d-9ac6-f3b6a8c923f5.png         781.43 KB
+public/lovable-uploads/hedge2.webp                                      722.95 KB
+public/services/in person delivery.webp                                 711.25 KB
+public/houseback.webp                                                   696.59 KB
+public/lovable-uploads/hedge.jpg                                        664.81 KB
+public/vanfront.webp                                                    656.57 KB
+public/lovable-uploads/hedge2.jpg                                       613.01 KB
+public/vanfront.jpg                                                     591.15 KB
+public/services/in person delivery.jpg                                  561.19 KB
+public/lovable-uploads/lawnmower.webp                                   554.23 KB
+public/services/tiprun.jpg                                               543.4 KB
+public/2.png                                                            519.22 KB
+public/services/tiprun.webp                                             519.08 KB
+public/services/removals.jpg                                            518.12 KB
+public/services/delivery.jpg                                             501.9 KB
+public/services/delivery.webp                                           457.23 KB
+public/lovable-uploads/lawnmower.jpg                                    451.96 KB
+public/PNG NOBACK.svg                                                   427.89 KB
+public/lovable-uploads/project3.webp                                    403.58 KB
+public/lovable-uploads/project1.webp                                    390.26 KB
+src/assets/hero-garden.webp                                             361.04 KB
+public/ARROW SVG.svg                                                    355.42 KB
+public/lovable-uploads/project3.jpg                                     347.74 KB
+src/assets/hero-garden.jpg                                              336.82 KB
+public/lovable-uploads/project1.jpg                                      335.4 KB
+public/services/removals.webp                                           319.28 KB
+src/assets/service-clearouts.webp                                       283.65 KB
+public/services/endtenancy.jpg                                          261.81 KB
+src/assets/service-clearouts.jpg                                         231.5 KB
+public/lovable-uploads/hero.webp                                        195.84 KB
+public/lovable-uploads/treecutting.jpg                                  190.26 KB
+public/lovable-uploads/treecutting.webp                                 177.87 KB
+public/lovable-uploads/261430b9-3f76-4615-bc01-41659d58a82f.webp        174.88 KB
+public/services/endtenancy.webp                                         173.55 KB
+src/assets/service-gardening.webp                                       172.49 KB
+src/assets/service-gardening.jpg                                        150.41 KB
+src/assets/service-tree-work.webp                                       138.39 KB
+src/assets/service-tree-work.jpg                                        129.77 KB
+public/website_background_full.jpg                                      129.24 KB
+src/assets/service-fencing.jpg                                          126.59 KB
+public/background.webp                                                  126.25 KB
+src/assets/service-fencing.webp                                         124.51 KB
+public/vanlogo.png                                                      123.44 KB
+public/1.webp                                                            121.4 KB
+public/lovable-uploads/hero.jpg                                         110.24 KB
+public/background.jpg                                                   103.75 KB
+public/Van logo edit.png                                                103.05 KB
+public/t.webp                                                           101.63 KB
+public/lovable-uploads/3eec67ad-e7bc-4af0-b6fd-3453d660c296.webp         89.29 KB
+public/lovable-uploads/Lowe-Maintenance-City-Guilds-NPTC-Qualifications.jpg   79.45 KB
+public/chris.webp                                                        70.61 KB
+public/website_background_full.webp                                      69.98 KB
+public/lovable-uploads/5314906b-f385-471d-9ac6-f3b6a8c923f5.webp         59.51 KB
+public/chrisback.webp                                                    59.28 KB
+public/2.webp                                                            54.02 KB
+public/lovable-uploads/Lowe-Maintenance-City-Guilds-NPTC-Qualifications.webp    37.1 KB
+public/vanlogo.webp                                                      35.96 KB
+public/Van logo edit.webp                                                35.27 KB
+public/vanv3.webp                                                        17.77 KB
+public/placeholder.svg                                                    3.18 KB
+public/whatsapp-svgrepo-com.svg                                           1.86 KB
+public/Facebook_Messenger_logo_2020.svg                                 889 Bytes
+public/facebook-messenger-white-logo-svgrepo-com (1).svg                503 Bytes

@@ -1,0 +1,21 @@
+# Force www to non-www (must be first)
+https://www.chrisyourmanwithavan.com/*  https://chrisyourmanwithavan.com/:splat  301!
+
+# Handle common bot requests
+# Redirect old hash-based URLs to proper routes (301 redirects for SEO)
+/#services       /services     301
+/#about          /             301
+/#contact-form   /             301
+/#reviews        /             301
+/#faq           /             301
+/#service-areas  /locations    301
+/#gallery       /             301
+
+# Handle common bot requests
+/robots.txt      /robots.txt   200
+/sitemap.xml     /sitemap.xml  200
+/favicon.ico     /favicon.ico  200
+
+# Prevent 404s for common requests
+/admin/*         /index.html   404
+/api/*           /api/:splat   200

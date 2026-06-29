@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Analytics Tracker Demo</title>
+    
+    <!-- Simple Analytics Script -->
+    <script 
+        src="./simple-tracker.js"
+        data-website-id="demo-website-123"
+        data-api-key="demo-api-key-456"
+        data-api-endpoint="https://api.revucapture.com/track">
+    </script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        
+        .messenger-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp {
+            background-color: #25D366;
+        }
+        
+        .whatsapp:hover {
+            background-color: #20ba5a;
+            transform: translateY(-2px);
+        }
+        
+        .facebook {
+            background-color: #0084FF;
+        }
+        
+        .facebook:hover {
+            background-color: #0073e6;
+            transform: translateY(-2px);
+        }
+        
+        .stats-panel {
+            background-color: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .stat-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .stat-item:last-child {
+            border-bottom: none;
+        }
+        
+        .stat-label {
+            font-weight: bold;
+            color: #495057;
+        }
+        
+        .stat-value {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .privacy-controls {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .button {
+            background-color: #6c757d;
+            color: white;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        
+        .button:hover {
+            background-color: #5a6268;
+        }
+        
+        .debug-info {
+            background-color: #f1f3f4;
+            border: 1px solid #dadce0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: monospace;
+            font-size: 12px;
+        }
+        
+        .highlight {
+            background-color: #fff3cd;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>📊 Simple Analytics Tracker Demo</h1>
+    
+    <div class="highlight">
+        <h3>🎯 What's Being Tracked</h3>
+        <p>This simple tracker only collects 3 pieces of data:</p>
+        <ul>
+            <li><strong>Website Visits:</strong> Each time someone visits your site</li>
+            <li><strong>WhatsApp Clicks:</strong> Clicks on WhatsApp links/buttons</li>
+            <li><strong>Facebook Messenger Clicks:</strong> Clicks on Facebook Messenger links/buttons</li>
+        </ul>
+    </div>
+    
+    <!-- Current Stats -->
+    <div class="stats-panel">
+        <h3>📈 Current Session Stats</h3>
+        <div class="stat-item">
+            <span class="stat-label">Website Visits:</span>
+            <span class="stat-value" id="visit-count">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">WhatsApp Clicks:</span>
+            <span class="stat-value" id="whatsapp-count">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Facebook Messenger Clicks:</span>
+            <span class="stat-value" id="facebook-count">Loading...</span>
+        </div>
+        <div class="stat-item">
+            <span class="stat-label">Tracking Status:</span>
+            <span class="stat-value" id="tracking-status">Loading...</span>
+        </div>
+    </div>
+    
+    <!-- Privacy Controls -->
+    <div class="privacy-controls">
+        <h3>🔒 Privacy Controls</h3>
+        <p>You can opt out of tracking at any time:</p>
+        <button class="button" onclick="toggleTracking()">Toggle Tracking</button>
+        <button class="button" onclick="refreshStats()">Refresh Stats</button>
+    </div>
+    
+    <!-- Messenger Buttons -->
+    <h2>💬 Test Messenger Links</h2>
+    <p>Click these buttons to test the tracking:</p>
+    
+    <div style="text-align: center;">
+        <a href="https://wa.me/1234567890?text=Hello" class="messenger-button whatsapp" target="_blank">
+            📱 WhatsApp
+        </a>
+        
+        <a href="https://m.me/yourpage" class="messenger-button facebook" target="_blank">
+            💬 Facebook Messenger
+        </a>
+    </div>
+    
+    <!-- Alternative WhatsApp Links -->
+    <h3>Alternative WhatsApp Links (all will be tracked):</h3>
+    <p>
+        <a href="https://wa.me/1234567890" class="messenger-button whatsapp" target="_blank">wa.me Link</a>
+        <a href="https://api.whatsapp.com/send?phone=1234567890" class="messenger-button whatsapp" target="_blank">api.whatsapp.com Link</a>
+    </p>
+    
+    <!-- Alternative Facebook Messenger Links -->
+    <h3>Alternative Facebook Messenger Links (all will be tracked):</h3>
+    <p>
+        <a href="https://m.me/yourpage" class="messenger-button facebook" target="_blank">m.me Link</a>
+        <a href="https://www.facebook.com/messages/t/yourpage" class="messenger-button facebook" target="_blank">facebook.com/messages Link</a>
+    </p>
+    
+    <!-- Debug Information -->
+    <div class="debug-info">
+        <h3>🔍 Debug Information</h3>
+        <div id="debug-info">
+            <p><strong>Page URL:</strong> <span id="page-url"></span></p>
+            <p><strong>Session ID:</strong> <span id="session-id"></span></p>
+            <p><strong>First Visit:</strong> <span id="first-visit"></span></p>
+            <p><strong>Last Visit:</strong> <span id="last-visit"></span></p>
+            <p><strong>User Agent:</strong> <span id="user-agent"></span></p>
+        </div>
+    </div>
+    
+    <script>
+        // Update stats display
+        function updateStats() {
+            if (window.SimpleTracker) {
+                const stats = SimpleTracker.getStats();
+                
+                document.getElementById('visit-count').textContent = stats.visits || 0;
+                document.getElementById('whatsapp-count').textContent = stats.whatsappClicks || 0;
+                document.getElementById('facebook-count').textContent = stats.facebookClicks || 0;
+                document.getElementById('tracking-status').textContent = stats.isOptedOut ? 'Disabled' : 'Enabled';
+            }
+        }
+        
+        function refreshStats() {
+            updateStats();
+            console.log('Stats refreshed:', SimpleTracker.getStats());
+        }
+        
+        function toggleTracking() {
+            if (window.SimpleTracker) {
+                if (SimpleTracker.isOptedOut()) {
+                    SimpleTracker.optIn();
+                } else {
+                    SimpleTracker.optOut();
+                }
+                updateStats();
+            }
+        }
+        
+        // Update debug information
+        function updateDebugInfo() {
+            document.getElementById('page-url').textContent = window.location.href;
+            document.getElementById('user-agent').textContent = navigator.userAgent.substring(0, 50) + '...';
+            
+            // Get session info from localStorage
+            try {
+                const sessionData = JSON.parse(localStorage.getItem('simple_session') || '{}');
+                if (sessionData.id) {
+                    document.getElementById('session-id').textContent = sessionData.id.substring(0, 20) + '...';
+                    document.getElementById('first-visit').textContent = new Date(sessionData.firstVisit).toLocaleString();
+                    document.getElementById('last-visit').textContent = new Date(sessionData.lastVisit).toLocaleString();
+                }
+            } catch (e) {
+                console.log('Could not load session data');
+            }
+        }
+        
+        // Manual tracking functions for testing
+        function testWhatsAppClick() {
+            if (window.SimpleTracker) {
+                SimpleTracker.trackWhatsAppClick();
+                updateStats();
+                console.log('Manual WhatsApp click tracked');
+            }
+        }
+        
+        function testFacebookClick() {
+            if (window.SimpleTracker) {
+                SimpleTracker.trackFacebookClick();
+                updateStats();
+                console.log('Manual Facebook Messenger click tracked');
+            }
+        }
+        
+        // Initialize page
+        window.addEventListener('load', function() {
+            // Wait for tracker to initialize
+            setTimeout(() => {
+                updateStats();
+                updateDebugInfo();
+            }, 1000);
+            
+            // Update stats every 5 seconds
+            setInterval(updateStats, 5000);
+        });
+        
+        // Log all clicks for debugging
+        document.addEventListener('click', function(event) {
+            const href = event.target.href || event.target.closest('a')?.href;
+            if (href) {
+                console.log('Click detected on:', href);
+            }
+        });
+    </script>
+    
+    <!-- Test Buttons for Manual Tracking -->
+    <div style="margin-top: 30px; padding: 20px; background-color: #f8f9fa; border-radius: 8px;">
+        <h3>🧪 Manual Testing</h3>
+        <p>Use these buttons to manually trigger tracking events:</p>
+        <button class="button" onclick="testWhatsAppClick()">Test WhatsApp Click</button>
+        <button class="button" onclick="testFacebookClick()">Test Facebook Click</button>
+        <button class="button" onclick="refreshStats()">Refresh Stats</button>
+    </div>
+    
+    <div style="margin-top: 30px; padding: 20px; background-color: #e9ecef; border-radius: 8px;">
+        <h3>📋 Implementation Notes</h3>
+        <ul>
+            <li><strong>Automatic Detection:</strong> The tracker automatically detects WhatsApp and Facebook Messenger links by their URLs</li>
+            <li><strong>Supported URLs:</strong> wa.me, whatsapp.com, api.whatsapp.com, m.me, messenger.com, facebook.com/messages</li>
+            <li><strong>Session Tracking:</strong> Visits are counted per 24-hour session</li>
+            <li><strong>Privacy:</strong> Users can opt out and all tracking stops immediately</li>
+            <li><strong>Data Storage:</strong> Stats are stored locally and sent to your API</li>
+        </ul>
+    </div>
+</body>
+</html>
+
