@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import JobsComponent from '../pages/Jobs';
+import '../index.css';
+---
+
+<BaseLayout
+  title="Jobs | Join the Team | Chris, Your Man with a Van"
+  description="Want to join the team? We're looking for drivers and labourers across Ayrshire. Apply now by sending your CV directly through our website."
+  keywords="van driver jobs ayrshire, labourer jobs cumnock, jobs man with a van, driving jobs ayrshire, removal jobs ayrshire"
+  canonical="https://chrisyourmanwithavan.com/jobs"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Jobs", "item": "https://chrisyourmanwithavan.com/jobs" }
+    ]
+  })} />
+  <JobsComponent client:load />
+</BaseLayout>

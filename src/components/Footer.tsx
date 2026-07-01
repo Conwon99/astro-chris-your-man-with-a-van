@@ -169,6 +169,12 @@ const Footer = () => {
             </div>
             <div className="flex flex-wrap justify-center md:justify-end gap-x-4 gap-y-1 text-sm">
               <a
+                href="/jobs"
+                className="text-[hsl(var(--sunshine-yellow))] hover:text-white transition-colors underline"
+              >
+                Jobs
+              </a>
+              <a
                 href="/privacy-policy"
                 className="text-[hsl(var(--sunshine-yellow))] hover:text-white transition-colors underline"
               >
