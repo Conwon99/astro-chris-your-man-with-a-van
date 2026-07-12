@@ -12,7 +12,7 @@ const AboutImageCollage = ({ className = "" }: AboutImageCollageProps) => {
           <div className="w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-lg overflow-hidden shadow-2xl">
             <LazyImage
               src="/dog.webp"
-              alt="Chris's dog companion"
+              alt="Chris and his dog in branded gear"
               className="w-full h-full object-cover"
               fallbackSrc="/dog.jpg"
               loading="lazy"
@@ -20,10 +20,11 @@ const AboutImageCollage = ({ className = "" }: AboutImageCollageProps) => {
           </div>
 
           <div className="absolute -bottom-4 -left-4 w-32 h-32 sm:w-40 sm:h-40 rounded-full overflow-hidden shadow-2xl bg-white">
-            <img
-              src="/chris-profile.jpeg"
-              alt="Chris, Your Man with a Van"
+            <LazyImage
+              src="/chris-profile.webp"
+              alt="Chris's dog in branded cap"
               className="w-full h-full object-cover"
+              fallbackSrc="/chris-profile.jpeg"
               loading="lazy"
             />
           </div>
