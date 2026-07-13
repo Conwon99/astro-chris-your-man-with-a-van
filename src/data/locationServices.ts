@@ -146,7 +146,7 @@ export function getLocationHubTitle(locationName: string, slug: string): string 
 
 export function getLocationHubMeta(locationName: string, slug: string): string {
   if (isLowRankingLocation(slug)) {
-    return `Man with a van in ${locationName}. 77 Google reviews, 5-star rated. Removals, courier & waste removal. SEPA registered. Free WhatsApp quote.`;
+    return `Man with a van in ${locationName}. 100 Google reviews, 5-star rated. Removals, courier & waste removal. SEPA registered. Free WhatsApp quote.`;
   }
   return `Expert van services in ${locationName}. Same-day removals, courier & waste disposal. SEPA registered. Free WhatsApp quotes. Serving Ayrshire.`;
 }
@@ -160,7 +160,7 @@ export function getLocationServiceSEO(locationSlug: string, serviceSlug: string)
   }
 
   const title = `${service.shortTitle} ${location.name} | Man with a Van | Chris`;
-  const description = `${service.title} in ${location.name}, Ayrshire. 77 Google reviews, 5-star rated. SEPA registered. Free WhatsApp quote across Ayrshire.`;
+  const description = `${service.title} in ${location.name}, Ayrshire. 100 Google reviews, 5-star rated. SEPA registered. Free WhatsApp quote across Ayrshire.`;
   const h1 = `${service.title} in ${location.name}, Ayrshire`;
   const canonical = `https://chrisyourmanwithavan.com/locations/${locationSlug}/${serviceSlug}`;
 
@@ -173,7 +173,7 @@ export function getServiceIntro(
   serviceSlug: string
 ): string {
   const intros: Record<string, string> = {
-    "small-removals": `Looking for a reliable man with a van in ${locationName}? Chris provides professional small removals and house moves throughout ${locationName} and ${region}. Whether you are moving within the town, relocating to a new property, or need furniture transported locally, you get a personal, careful service backed by 77 five-star Google reviews.`,
+    "small-removals": `Looking for a reliable man with a van in ${locationName}? Chris provides professional small removals and house moves throughout ${locationName} and ${region}. Whether you are moving within the town, relocating to a new property, or need furniture transported locally, you get a personal, careful service backed by 100 five-star Google reviews.`,
     courier: `Need a courier or same-day delivery in ${locationName}? Chris offers fast, dependable courier services across ${locationName} and ${region}, connecting local homes and businesses with urgent collections and drop-offs. From documents and parcels to larger items, every job is handled personally with direct WhatsApp communication.`,
     "waste-removal": `Need tip runs or waste removal in ${locationName}? Chris is SEPA registered and provides legal, hassle-free waste disposal across ${locationName} and ${region}. Garage clearances, garden waste, end-of-tenancy rubbish, and household junk removal are all handled with proper disposal — no illegal dumping.`,
     "collection-and-delivery": `Bought furniture or need a store collection in ${locationName}? Chris collects from retailers, depots, and online delivery points across ${locationName} and ${region}, then delivers carefully to your door. Same-day collection and delivery is often available when you need items moved quickly.`,

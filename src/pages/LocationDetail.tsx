@@ -1027,7 +1027,7 @@ const LocationDetail = ({ slug }: LocationDetailProps) => {
           </div>
         </section>
 
-        <Reviews locationName={location.name} reviewCount={77} quoteSectionId="location-quote" />
+        <Reviews locationName={location.name} reviewCount={100} quoteSectionId="location-quote" />
 
         {/* CTA Section */}
         <section id="location-quote" className="py-20 px-4 bg-[hsl(var(--muted))]">

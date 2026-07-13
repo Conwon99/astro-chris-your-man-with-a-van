@@ -64,7 +64,7 @@ const LocationServiceDetail = ({ locationSlug, serviceSlug }: LocationServiceDet
   };
 
   const benefits = [
-    { icon: Star, title: "77 Google Reviews", description: `Trusted by customers across ${location.name} and Ayrshire with a 5-star rating.` },
+    { icon: Star, title: "100 Google Reviews", description: `Trusted by customers across ${location.name} and Ayrshire with a 5-star rating.` },
     { icon: ShieldCheck, title: "SEPA Registered", description: "Fully licensed for waste removal and tip runs with legal disposal guaranteed." },
     { icon: MapPin, title: "Local Knowledge", description: `Chris knows ${location.name}'s streets, parking, and access routes inside out.` },
     { icon: Phone, title: "Fast Response", description: "Free quotes via WhatsApp with quick, personal communication on every job." },
@@ -105,7 +105,7 @@ const LocationServiceDetail = ({ locationSlug, serviceSlug }: LocationServiceDet
               <p className="text-base sm:text-xl text-white/90 leading-snug mb-4 sm:mb-6">
                 <span className="sm:hidden">Free quotes via WhatsApp or Messenger.</span>
                 <span className="hidden sm:inline">
-                  Man with a van service in {location.name} — 77 five-star Google reviews. Free quotes via WhatsApp or Messenger.
+                  Man with a van service in {location.name} — 100 five-star Google reviews. Free quotes via WhatsApp or Messenger.
                 </span>
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 max-w-sm sm:max-w-none mx-auto sm:mx-0">
@@ -166,7 +166,7 @@ const LocationServiceDetail = ({ locationSlug, serviceSlug }: LocationServiceDet
                 `Competitive, transparent pricing with free WhatsApp quotes`,
                 `Fast response times across ${location.name} and ${location.region}`,
                 `Fully insured and SEPA registered for all waste-related work`,
-                `77 five-star Google reviews from satisfied Ayrshire customers`,
+                `100 five-star Google reviews from satisfied Ayrshire customers`,
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-white/90">
                   <Check className="w-5 h-5 text-[hsl(var(--primary-orange))] flex-shrink-0 mt-0.5" />
@@ -213,7 +213,7 @@ const LocationServiceDetail = ({ locationSlug, serviceSlug }: LocationServiceDet
           </div>
         </section>
 
-        <Reviews locationName={location.name} reviewCount={77} quoteSectionId="location-service-quote" />
+        <Reviews locationName={location.name} reviewCount={100} quoteSectionId="location-service-quote" />
 
         <section className="py-20 px-4 bg-[hsl(var(--muted))]">
           <div className="container mx-auto max-w-7xl">

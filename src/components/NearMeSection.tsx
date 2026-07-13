@@ -28,11 +28,11 @@ const NearMeSection = () => {
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-4">
             Searching for a man with a van near you? Chris serves towns across Ayrshire with removals,
-            courier, waste removal, and more — backed by <strong className="text-primary">77 five-star Google reviews</strong>.
+            courier, waste removal, and more — backed by <strong className="text-primary">100 five-star Google reviews</strong>.
           </p>
           <div className="inline-flex items-center gap-2 text-primary font-semibold">
             <Star className="w-5 h-5 fill-current" />
-            <span>5.0 rating · 77 Google reviews · SEPA registered</span>
+            <span>5.0 rating · 100 Google reviews · SEPA registered</span>
           </div>
         </div>
 

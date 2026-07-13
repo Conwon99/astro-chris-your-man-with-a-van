@@ -33,7 +33,7 @@ interface GoogleReviewsBadgeProps {
 
 const GoogleReviewsBadge = ({
   className = "",
-  reviewCount = 77,
+  reviewCount = 100,
   goldStars = false,
   compact = false,
 }: GoogleReviewsBadgeProps) => {

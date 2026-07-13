@@ -39,7 +39,7 @@ const staticReviews: Review[] = [
 
 const Reviews = ({
   locationName,
-  reviewCount = 77,
+  reviewCount = 100,
   quoteSectionId = "contact-form",
 }: ReviewsProps) => {
   const [reviews, setReviews] = useState<Review[]>(staticReviews);

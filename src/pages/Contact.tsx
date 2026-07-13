@@ -222,7 +222,7 @@ const Contact = () => {
                 Van Services You Can Quote For
               </h2>
               <p className="text-white/90 mb-6 leading-relaxed">
-                Chris, Your Man with a Van provides professional, reliable help across Ayrshire — backed by 77 five-star Google reviews. Whether you need a single item moved or a full property cleared, you get a personal service with direct WhatsApp communication and honest, transparent pricing.
+                Chris, Your Man with a Van provides professional, reliable help across Ayrshire — backed by 100 five-star Google reviews. Whether you need a single item moved or a full property cleared, you get a personal service with direct WhatsApp communication and honest, transparent pricing.
               </p>
               <p className="text-white/90 mb-6 leading-relaxed">
                 Request a free, no-obligation quote for small removals and house moves, same-day courier and delivery, SEPA registered waste removal and tip runs, in-store collection and furniture delivery, end-of-tenancy clearances, or flat-pack assembly. Chris is fully insured, SEPA registered for waste work, and available day and night across Cumnock, Ayr, Kilmarnock, Irvine, Troon, Prestwick and surrounding towns.
