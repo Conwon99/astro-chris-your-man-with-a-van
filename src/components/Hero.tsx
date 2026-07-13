@@ -192,10 +192,10 @@ Please get back to me with a quote. Thanks!`;
           {/* Mobile-only image after contact form */}
           <div className="md:hidden mt-8 mb-4 w-full">
             <LazyImage
-              src="/back1.webp"
-              alt="Chris, Your Man with a Van mobile image"
+              src="/hero-mobile.webp"
+              alt="Chris, Your Man with a Van"
               className="w-full h-auto rounded-lg shadow-lg"
-              fallbackSrc="/back1.jpg"
+              fallbackSrc="/hero-mobile.jpg"
             />
           </div>
         </div>
