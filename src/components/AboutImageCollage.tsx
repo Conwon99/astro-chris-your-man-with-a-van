@@ -23,7 +23,7 @@ const AboutImageCollage = ({ className = "" }: AboutImageCollageProps) => {
             <LazyImage
               src="/chris-profile.webp"
               alt="Chris's dog in branded cap"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover object-top"
               fallbackSrc="/chris-profile.jpeg"
               loading="lazy"
             />
