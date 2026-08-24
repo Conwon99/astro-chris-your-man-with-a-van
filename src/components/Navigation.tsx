@@ -118,7 +118,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation & CTA - Right Aligned */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-5 xl:space-x-8">
             {/* Desktop Navigation */}
             {navItems.map((item) => (
               <a
@@ -155,7 +155,7 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             type="button"
-            className="md:hidden p-2 z-50 relative"
+            className="lg:hidden p-2 z-50 relative"
             onClick={(e) => {
               e.preventDefault();
               e.stopPropagation();
@@ -174,7 +174,7 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden border-t transition-all duration-300 z-40 relative bg-black/95 border-gray-800">
+          <div className="lg:hidden border-t transition-all duration-300 z-40 relative bg-black/95 border-gray-800">
             <div className="py-4 space-y-4">
               {navItems.map((item) => (
                 <a
