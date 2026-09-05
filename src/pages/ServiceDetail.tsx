@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { trackWhatsAppClick, trackFacebookMessengerClick, trackNavigation, trackWhatsAppMessage, trackFacebookMessage } from "@/utils/analytics";
-import { LOW_RANKING_LOCATIONS } from "@/data/locationServices";
+import { LOW_RANKING_LOCATIONS, getServiceBySlug } from "@/data/locationServices";
 
 // WhatsApp Logo Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -1203,34 +1203,36 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
           </div>
         </section>
 
-        {/* Available in your area */}
-        <section className="py-20 px-4 bg-[hsl(var(--background))]">
-          <div className="container mx-auto max-w-7xl">
-            <div className="text-center mb-12">
-              <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-4">
-                {service.title} — Available in Your Area
-              </h2>
-              <p className="text-white/80 max-w-2xl mx-auto">
-                Chris provides {service.title.toLowerCase()} across Ayrshire. Select your town for local pricing and availability.
-              </p>
+        {/* Available in your area - only for services with dedicated location pages */}
+        {getServiceBySlug(slug || '') && (
+          <section className="py-20 px-4 bg-[hsl(var(--background))]">
+            <div className="container mx-auto max-w-7xl">
+              <div className="text-center mb-12">
+                <h2 className="font-display text-3xl lg:text-4xl font-bold text-white mb-4">
+                  {service.title} — Available in Your Area
+                </h2>
+                <p className="text-white/80 max-w-2xl mx-auto">
+                  Chris provides {service.title.toLowerCase()} across Ayrshire. Select your town for local pricing and availability.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
+                {LOW_RANKING_LOCATIONS.map((loc) => (
+                  <a
+                    key={loc.slug}
+                    href={`/locations/${loc.slug}/${slug}`}
+                    onClick={() => trackNavigation(`service_to_location_${loc.slug}`)}
+                    className="flex items-center gap-2 p-4 rounded-lg bg-[hsl(var(--card))] border border-white/10 hover:border-[hsl(var(--primary-orange))]/50 transition-all group"
+                  >
+                    <MapPin className="w-4 h-4 text-[hsl(var(--primary-orange))] flex-shrink-0" />
+                    <span className="text-white text-sm font-medium group-hover:text-[hsl(var(--primary-orange))] transition-colors">
+                      {service.title} in {loc.name}
+                    </span>
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
-              {LOW_RANKING_LOCATIONS.map((loc) => (
-                <a
-                  key={loc.slug}
-                  href={`/locations/${loc.slug}/${slug}`}
-                  onClick={() => trackNavigation(`service_to_location_${loc.slug}`)}
-                  className="flex items-center gap-2 p-4 rounded-lg bg-[hsl(var(--card))] border border-white/10 hover:border-[hsl(var(--primary-orange))]/50 transition-all group"
-                >
-                  <MapPin className="w-4 h-4 text-[hsl(var(--primary-orange))] flex-shrink-0" />
-                  <span className="text-white text-sm font-medium group-hover:text-[hsl(var(--primary-orange))] transition-colors">
-                    {service.title} in {loc.name}
-                  </span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* FAQ Section */}
         <section className="py-20 px-4 bg-[hsl(var(--muted))]">
