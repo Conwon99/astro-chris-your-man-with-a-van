@@ -37,6 +37,7 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
     commonSituations: { title: string; description: string }[];
     servicePromise: { title: string; description: string }[];
     faqs: { question: string; answer: string }[];
+    gallery?: { src: string; alt: string }[];
   }> = {
     "small-removals": {
       title: "Small Removals & House Moves",
@@ -440,6 +441,117 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
           question: "Can you work around inspection dates?",
           answer: "Yes, I understand timing is important around property inspections. I'll work with your schedule and can often provide service on specific dates to ensure properties are cleared in time."
         }
+      ]
+    },
+    "end-of-tenancy-clean": {
+      title: "End of Tenancy Clearance & Clean",
+      keywords: ["end of tenancy clearance and clean ayrshire", "property clearance and cleaning ayrshire", "house clearance clean cumnock", "landlord clean ayrshire"],
+      description: "Full property clearance plus a thorough clean across Ayrshire - not just emptied, genuinely ready for handover. Ovens, kitchens, bathrooms, floors and surfaces all cleaned. SEPA registered waste disposal included.",
+      metaDescription: "End of tenancy clearance and cleaning in Ayrshire. Property clearance plus a full clean - ovens, kitchens, bathrooms, floors. SEPA registered. Free quotes via WhatsApp.",
+      features: [
+        "Full property clearance",
+        "Deep oven & kitchen clean",
+        "Bathroom & fixtures cleaned",
+        "Floors, surfaces & fittings cleaned",
+        "Fridge/freezer cleaned inside",
+        "Property ready for handover",
+        "SEPA registered disposal",
+        "Priced to the job"
+      ],
+      details: "On top of my usual end-of-tenancy clearance, I now also offer a full property clean once everything's been cleared out. That means ovens, kitchens, bathrooms, floors and surfaces - not just an empty property, but one that's genuinely ready for inspection or the next tenant, in a single visit. Price is worked out based on the size of the property and what needs done, so get in touch for a quote.",
+      processSteps: [
+        {
+          number: "1",
+          title: "Property Assessment",
+          description: "Contact me with details of the property - size, what needs cleared, and what level of clean is needed (e.g. full deep clean vs a general tidy). This helps me give an accurate quote."
+        },
+        {
+          number: "2",
+          title: "Quote & Timing",
+          description: "I'll give you a clear price for the combined clearance and clean, based on the property and scope of work. I can often work around tight move-out or handover dates."
+        },
+        {
+          number: "3",
+          title: "Clearance",
+          description: "I'll remove all unwanted furniture, belongings and rubbish first, disposing of everything legally as a SEPA registered carrier."
+        },
+        {
+          number: "4",
+          title: "Full Clean",
+          description: "With the property cleared, I clean thoroughly - oven, kitchen surfaces and cabinets, bathroom, floors, and fixtures - so the property is genuinely ready for handover, not just empty."
+        }
+      ],
+      commonSituations: [
+        {
+          title: "Tenant Move-Out",
+          description: "Moving out and want the best chance of your deposit back? I'll clear everything and leave the property properly cleaned - oven, kitchen, bathroom and floors included."
+        },
+        {
+          title: "Landlord Turnaround",
+          description: "Preparing a property for new tenants? I'll clear out anything left behind and clean the property so it's genuinely ready to show or hand over, not just emptied."
+        },
+        {
+          title: "Letting Agent Handover",
+          description: "Need a property signed off quickly between tenancies? I offer a fast, thorough clearance and clean so the property passes inspection first time."
+        },
+        {
+          title: "Post-Renovation Clean",
+          description: "Just had building or renovation work done? I'll clear any leftover materials and give the property a full clean, so it's ready to move into or list."
+        },
+        {
+          title: "Deep Oven & Kitchen Clean",
+          description: "Oven or kitchen seen better days? I can focus specifically on a deep clean of the oven, hob, and kitchen surfaces as part of the job."
+        },
+        {
+          title: "Holiday Let Turnaround",
+          description: "Need a quick turnaround between guests? I can clear and clean holiday lets efficiently, so the property is guest-ready for the next booking."
+        }
+      ],
+      servicePromise: [
+        {
+          title: "One Visit, Fully Ready",
+          description: "No need to book a separate cleaner after I clear the property - I handle both in one visit, so the property is genuinely ready for handover or inspection."
+        },
+        {
+          title: "Legal Disposal",
+          description: "As a SEPA registered carrier, all cleared waste is disposed of legally. I can provide disposal receipts if needed for your landlord or letting agent."
+        },
+        {
+          title: "Thorough Clean",
+          description: "Ovens, kitchen surfaces, bathrooms, floors and fixtures are all cleaned properly - not a quick wipe-down. I take the same care with the clean as I do the clearance."
+        },
+        {
+          title: "Fair, Upfront Pricing",
+          description: "Every property and job is different, so I price based on size and what's needed. You'll get a clear quote before I start - no surprises."
+        }
+      ],
+      faqs: [
+        {
+          question: "What's included in the clean?",
+          answer: "Typically the oven, hob, kitchen surfaces and cabinets, bathroom (bath/shower, toilet, sink), floors throughout, and fixtures and fittings. Let me know if you need anything specific and I'll factor it into the quote."
+        },
+        {
+          question: "How is pricing worked out?",
+          answer: "Price depends on the size of the property and what needs done - just clearance, just a clean, or both together. Get in touch with the details and I'll give you a clear, upfront quote."
+        },
+        {
+          question: "Can I book just the clean without a clearance?",
+          answer: "Yes - if the property is already cleared and you just need it cleaned, that's fine too. Let me know what's needed and I'll quote accordingly."
+        },
+        {
+          question: "How quickly can this be done?",
+          answer: "I can often accommodate tight move-out or handover dates - contact me with your timeline and I'll do my best to fit around it."
+        }
+      ],
+      gallery: [
+        { src: "/services/end-of-tenancy-clean-oven-before.jpg", alt: "Dirty oven before deep clean" },
+        { src: "/services/end-of-tenancy-clean-oven-after.jpg", alt: "Spotless oven after deep clean" },
+        { src: "/services/end-of-tenancy-clean-kitchen.jpg", alt: "Cleared and cleaned kitchen, ready for handover" },
+        { src: "/services/end-of-tenancy-clean-kitchen-inprogress.jpg", alt: "Kitchen mid-clean with cleaning equipment" },
+        { src: "/services/end-of-tenancy-clean-bathroom.jpg", alt: "Cleaned bathroom, ready for handover" },
+        { src: "/services/end-of-tenancy-clean-fridge.jpg", alt: "Fridge interior cleaned" },
+        { src: "/services/end-of-tenancy-clean-lounge-1.jpg", alt: "Cleared living room, ready for handover" },
+        { src: "/services/end-of-tenancy-clean-lounge-2.jpg", alt: "Cleared bedroom, ready for handover" }
       ]
     },
     "flat-pack-assembly": {
@@ -880,6 +992,37 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
             </div>
           </div>
         </section>
+
+        {/* Recent Job Photos */}
+        {service.gallery && (
+          <section className="py-20 px-4 bg-[hsl(var(--background))]">
+            <div className="container mx-auto max-w-7xl">
+              <div className="text-center mb-12">
+                <h2 className="font-display text-4xl lg:text-5xl font-bold text-white mb-4">
+                  Recent Job
+                </h2>
+                <p className="text-xl text-white/80 max-w-3xl mx-auto">
+                  A recent clearance and clean job - real photos, not stock images.
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-5xl mx-auto">
+                {service.gallery.map((photo, index) => (
+                  <div key={index} className="relative rounded-xl overflow-hidden shadow-lg">
+                    <div className="aspect-square relative">
+                      <LazyImage
+                        src={photo.src}
+                        alt={photo.alt}
+                        className="!relative w-full h-full object-cover"
+                        fallbackSrc={photo.src}
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
 
         {/* Service Coverage Area */}
         <section className="py-20 px-4 bg-[hsl(var(--muted))]">

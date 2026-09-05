@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Truck, Package, Trash2, ShoppingCart, Home, Wrench, Phone, MessageSquare, MapPin } from "lucide-react";
+import { ArrowRight, Truck, Package, Trash2, ShoppingCart, Home, Wrench, Sparkles, Phone, MessageSquare, MapPin } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -112,6 +112,24 @@ const Services = () => {
       icon: Home,
       color: "primary-orange",
       details: "Moving out and need to clear the property? I provide comprehensive end-of-tenancy clearance services. From removing old furniture to clearing out all belongings, I'll ensure the property is ready for inspection. Fast, reliable service that helps tenants and landlords alike."
+    },
+    {
+      title: "End of Tenancy Clearance & Clean",
+      slug: "end-of-tenancy-clean",
+      description: "Full property clearance plus a thorough clean, so the property is genuinely ready for handover - not just emptied. Ovens, kitchens, bathrooms, floors and surfaces all cleaned.",
+      features: [
+        "Full property clearance",
+        "Deep oven & kitchen clean",
+        "Bathroom & fixtures cleaned",
+        "Floors, surfaces & fittings",
+        "Property ready for handover",
+        "SEPA registered disposal"
+      ],
+      image: "/services/end-of-tenancy-clean-oven-after.jpg",
+      fallbackImage: "/services/end-of-tenancy-clean-oven-after.jpg",
+      icon: Sparkles,
+      color: "primary-orange",
+      details: "On top of my usual end-of-tenancy clearance, I now also offer a full property clean once everything's been cleared out - ovens, kitchens, bathrooms, floors and surfaces. One visit, and the property is genuinely ready for inspection or the next tenant. Price depends on the size of the property and what's needed, so just get in touch for a quote."
     },
     {
       title: "Flat Pack Assembly",

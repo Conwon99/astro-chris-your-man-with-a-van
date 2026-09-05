@@ -52,6 +52,7 @@ const entries = [
   urlEntry('/', { priority: '1.0', changefreq: 'weekly' }),
   urlEntry('/services', { priority: '0.9' }),
   ...SERVICES.map((slug) => urlEntry(`/services/${slug}`, { priority: '0.8' })),
+  urlEntry('/services/end-of-tenancy-clean', { priority: '0.8' }),
   urlEntry('/locations', { priority: '0.9' }),
   ...ALL_LOCATIONS.map((slug) =>
     urlEntry(`/locations/${slug}`, {
