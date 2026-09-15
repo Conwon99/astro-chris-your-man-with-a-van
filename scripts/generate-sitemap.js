@@ -61,6 +61,7 @@ const entries = [
   ),
   urlEntry('/contact', { priority: '0.8' }),
   urlEntry('/blog', { priority: '0.6' }),
+  urlEntry('/blog/beyond-the-boxes', { priority: '0.6' }),
   ...LOW_RANKING_LOCATIONS.flatMap((location) =>
     SERVICES.map((service) =>
       urlEntry(`/locations/${location}/${service}`, { priority: '0.7' })

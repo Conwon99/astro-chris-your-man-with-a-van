@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BlogBeyondTheBoxesComponent from '../BlogBeyondTheBoxes';
+import '../../index.css';
+---
+
+<BaseLayout
+  title="Beyond the Boxes: Your House Move Guide | Blog | Chris, Your Man with a Van"
+  description="Moving house? Beyond the Boxes is a new blog mini-series with honest, tried-and-tested tips for pre-packing, packing and moving day across Ayrshire."
+  keywords="house move tips ayrshire, moving house guide cumnock, packing tips ayrshire, house removals blog, beyond the boxes"
+  canonical="https://chrisyourmanwithavan.com/blog/beyond-the-boxes"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://chrisyourmanwithavan.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Beyond the Boxes", "item": "https://chrisyourmanwithavan.com/blog/beyond-the-boxes" }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Beyond the Boxes",
+    "description": "Moving house? Beyond the Boxes is a new blog mini-series with honest, tried-and-tested tips for pre-packing, packing and moving day across Ayrshire.",
+    "author": { "@type": "Person", "name": "Chris" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chris, Your Man with a Van",
+      "logo": { "@type": "ImageObject", "url": "https://chrisyourmanwithavan.com/vanlogo.png" }
+    },
+    "mainEntityOfPage": "https://chrisyourmanwithavan.com/blog/beyond-the-boxes"
+  })} />
+  <BlogBeyondTheBoxesComponent client:load />
+</BaseLayout>

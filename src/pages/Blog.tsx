@@ -170,6 +170,14 @@ const Blog = () => {
                 </a>{" "}
                 to get £5 off your first job.
               </p>
+
+              <p>
+                Moving house soon? Check out my new blog series,{" "}
+                <a href="/blog/beyond-the-boxes" className="text-[hsl(var(--primary-orange))] font-semibold hover:underline">
+                  Beyond the Boxes
+                </a>
+                , for honest tips on making your move easier.
+              </p>
             </div>
 
             {/* Key takeaways */}
