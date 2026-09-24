@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import BeyondTheBoxesComponent from '../../pages/BeyondTheBoxes';
+import '../../index.css';
+---
+
+<BaseLayout
+  title="Beyond the Boxes! | Blog | Chris, Your Man with a Van"
+  description="Moving house doesn't have to be a nightmare. A new mini-series with tried-and-tested tips to help your move go smoother, from Chris, Your Man with a Van."
+  keywords="house moving tips ayrshire, moving house advice cumnock, packing tips ayrshire, man with a van blog"
+  canonical="https://chrisyourmanwithavan.com/blog/beyond-the-boxes"
+>
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://chrisyourmanwithavan.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://chrisyourmanwithavan.com/blog" },
+      { "@type": "ListItem", "position": 3, "name": "Beyond the Boxes!", "item": "https://chrisyourmanwithavan.com/blog/beyond-the-boxes" }
+    ]
+  })} />
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Beyond the Boxes!",
+    "description": "Moving house doesn't have to be a nightmare. A new mini-series with tried-and-tested tips to help your move go smoother.",
+    "author": { "@type": "Person", "name": "Chris" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Chris, Your Man with a Van",
+      "logo": { "@type": "ImageObject", "url": "https://chrisyourmanwithavan.com/vanlogo.png" }
+    },
+    "mainEntityOfPage": "https://chrisyourmanwithavan.com/blog/beyond-the-boxes"
+  })} />
+  <BeyondTheBoxesComponent client:load />
+</BaseLayout>
