@@ -514,52 +514,6 @@ const LocationDetail = ({ slug }: LocationDetailProps) => {
         movingTips: "Darvel's residential areas generally have good parking access. Properties are well-served by local roads connecting to major routes. I know the area and can advise on the best approach for your property."
       }
     },
-    dalrymple: {
-      name: "Dalrymple",
-      fullName: "Dalrymple, Ayrshire",
-      nearbyAreas: ["Ayr", "Patna", "Dalmellington"],
-      description: "Professional van services in Dalrymple and surrounding areas. I provide reliable removals, courier services, and waste removal throughout Dalrymple and nearby communities.",
-      localContent: {
-        about: "Dalrymple is a village in East Ayrshire, located in a rural setting. The village features traditional properties and good access to surrounding countryside. Dalrymple's location makes it convenient for van services covering East Ayrshire.",
-        services: `Van services in Dalrymple cover house moves within the village and to nearby areas, furniture collection and delivery from stores in Ayr, and regular tip runs for waste removal. The rural location means properties often have gardens or outbuildings needing clearance.`,
-        commonRequests: [
-          "House moves within Dalrymple",
-          "Furniture delivery from Ayr stores",
-          "Tip runs and waste removal",
-          "Courier services to Ayr and nearby areas",
-          "Property clearances",
-          "Garage and shed clearances"
-        ],
-        localAreas: [
-          { name: "Dalrymple Village", description: "Serving the village with residential properties. Convenient for all van services." }
-        ],
-        whyLocation: "Dalrymple's location near Ayr makes it easily accessible for van services. The rural nature of the area means regular demand for waste removal and clearances.",
-        movingTips: "Dalrymple's residential areas generally have good parking access. Rural properties may require careful access planning. I know the area and can advise on the best approach for your property."
-      }
-    },
-    galston: {
-      name: "Galston",
-      fullName: "Galston, Ayrshire",
-      nearbyAreas: ["Newmilns", "Darvel", "Kilmarnock"],
-      description: "Professional van services in Galston and surrounding areas. I provide reliable removals, courier services, and waste removal throughout Galston and nearby communities.",
-      localContent: {
-        about: "Galston is a town in East Ayrshire, located in the Irvine Valley. The town features traditional properties and good connections to surrounding areas. Galston's location makes it convenient for van services covering East Ayrshire.",
-        services: `Van services in Galston cover house moves within the town and to nearby areas, furniture collection and delivery from stores in Kilmarnock, and regular tip runs for waste removal. The town's residential nature creates steady demand for removals and deliveries.`,
-        commonRequests: [
-          "House moves within Galston",
-          "Furniture delivery from Kilmarnock stores",
-          "Tip runs and waste removal",
-          "Courier services to Kilmarnock and nearby areas",
-          "Property clearances",
-          "Garage and shed clearances"
-        ],
-        localAreas: [
-          { name: "Galston Town Centre", description: "Serving the town centre with shops and residential properties. Convenient for all van services." }
-        ],
-        whyLocation: "Galston's location in the Irvine Valley makes it easily accessible for van services. The town's residential nature creates regular demand for removals and deliveries.",
-        movingTips: "Galston's residential areas generally have good parking access. Properties are well-served by local roads connecting to major routes. I know the area and can advise on the best approach for your property."
-      }
-    },
     girvan: {
       name: "Girvan",
       fullName: "Girvan, Ayrshire",
@@ -1167,7 +1121,6 @@ const LocationDetail = ({ slug }: LocationDetailProps) => {
                 { name: "Maybole", slug: "maybole" },
                 { name: "Girvan", slug: "girvan" },
                 { name: "Stewarton", slug: "stewarton" },
-                { name: "Dalrymple", slug: "dalrymple" },
                 { name: "Mauchline", slug: "mauchline" },
                 { name: "Dalmellington", slug: "dalmellington" },
                 { name: "Patna", slug: "patna" },
@@ -1181,7 +1134,6 @@ const LocationDetail = ({ slug }: LocationDetailProps) => {
                 { name: "Ardrossan", slug: "ardrossan" },
                 { name: "Darvel", slug: "darvel" },
                 { name: "Newmilns", slug: "newmilns" },
-                { name: "Galston", slug: "galston" },
                 { name: "Kirkconnel", slug: "kirkconnel" },
                 { name: "Sanquhar", slug: "sanquhar" },
                 { name: "Mossblown", slug: "mossblown" },

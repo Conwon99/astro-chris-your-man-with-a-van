@@ -21,7 +21,6 @@ const ServiceAreas = () => {
     { name: "Maybole", slug: "maybole" },
     { name: "Girvan", slug: "girvan" },
     { name: "Stewarton", slug: "stewarton" },
-    { name: "Dalrymple", slug: "dalrymple" },
     { name: "Mauchline", slug: "mauchline" },
     { name: "Dalmellington", slug: "dalmellington" },
     { name: "Patna", slug: "patna" },
@@ -35,7 +34,6 @@ const ServiceAreas = () => {
     { name: "Ardrossan", slug: "ardrossan" },
     { name: "Darvel", slug: "darvel" },
     { name: "Newmilns", slug: "newmilns" },
-    { name: "Galston", slug: "galston" },
     { name: "Kirkconnel", slug: "kirkconnel" },
     { name: "Sanquhar", slug: "sanquhar" },
     { name: "Mossblown", slug: "mossblown" }

@@ -224,7 +224,7 @@ const LocationServiceDetail = ({ locationSlug, serviceSlug }: LocationServiceDet
               {siblingServices.map((sibling) => (
                 <a
                   key={sibling.slug}
-                  href={`/locations/${location.slug}/${sibling.slug}`}
+                  href={getServiceLink(location.slug, sibling.slug)}
                   onClick={() => trackNavigation(`location_service_sibling_${sibling.slug}`)}
                   className="card-service p-6 hover:border-[hsl(var(--primary-orange))]/50 transition-all group flex items-center justify-between"
                 >
