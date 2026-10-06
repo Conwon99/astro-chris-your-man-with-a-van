@@ -1,6 +1,6 @@
 import { MapPin, Star } from "lucide-react";
 import { trackNavigation } from "@/utils/analytics";
-import { isLowRankingLocation } from "@/data/locationServices";
+import { hasLocationServicePage } from "@/data/locationServices";
 
 const westTowns = [
   { name: "Irvine", slug: "irvine" },
@@ -14,7 +14,7 @@ const westTowns = [
 ];
 
 const getTownHref = (slug: string) =>
-  isLowRankingLocation(slug)
+  hasLocationServicePage(slug, "small-removals")
     ? `/locations/${slug}/small-removals`
     : `/locations/${slug}`;
 

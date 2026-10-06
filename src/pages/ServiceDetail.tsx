@@ -5,7 +5,7 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { trackWhatsAppClick, trackFacebookMessengerClick, trackNavigation, trackWhatsAppMessage, trackFacebookMessage } from "@/utils/analytics";
-import { LOW_RANKING_LOCATIONS, getServiceBySlug } from "@/data/locationServices";
+import { LOW_RANKING_LOCATIONS, getServiceBySlug, hasLocationServicePage } from "@/data/locationServices";
 
 // WhatsApp Logo Component
 const WhatsAppIcon = ({ className }: { className?: string }) => (
@@ -1204,7 +1204,7 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
         </section>
 
         {/* Available in your area - only for services with dedicated location pages */}
-        {getServiceBySlug(slug || '') && (
+        {getServiceBySlug(slug || '') && LOW_RANKING_LOCATIONS.some((loc) => hasLocationServicePage(loc.slug, slug || '')) && (
           <section className="py-20 px-4 bg-[hsl(var(--background))]">
             <div className="container mx-auto max-w-7xl">
               <div className="text-center mb-12">
@@ -1216,7 +1216,7 @@ const ServiceDetail = ({ slug }: ServiceDetailProps) => {
                 </p>
               </div>
               <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-3">
-                {LOW_RANKING_LOCATIONS.map((loc) => (
+                {LOW_RANKING_LOCATIONS.filter((loc) => hasLocationServicePage(loc.slug, slug || '')).map((loc) => (
                   <a
                     key={loc.slug}
                     href={`/locations/${loc.slug}/${slug}`}

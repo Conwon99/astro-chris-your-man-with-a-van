@@ -24,15 +24,24 @@ const ALL_LOCATIONS = [
   'cumnock', 'ayr', 'kilmarnock', 'irvine', 'troon', 'prestwick',
   'kirkconnel', 'sanquhar', 'mossblown', 'ardrossan', 'dreghorn', 'saltcoats',
   'beith', 'stewarton', 'patna', 'dalmellington', 'maybole', 'newmilns',
-  'darvel', 'dalrymple', 'galston', 'girvan', 'dalry', 'kilwinning', 'largs',
+  'darvel', 'girvan', 'dalry', 'kilwinning', 'largs',
   'auchinleck', 'mauchline',
 ];
 
-const LOW_RANKING_LOCATIONS = [
-  'irvine', 'kilmarnock', 'troon', 'ayr', 'dalry', 'ardrossan', 'cumnock',
-  'beith', 'auchinleck', 'darvel', 'mauchline', 'prestwick', 'newmilns',
-  'kirkconnel', 'mossblown', 'dreghorn', 'girvan',
-];
+// Keep in sync with LOCATION_SERVICE_PAGES in src/data/locationServices.ts
+const LOCATION_SERVICE_PAGES = {
+  irvine: ['small-removals', 'waste-removal', 'flat-pack-assembly'],
+  kilmarnock: ['small-removals'],
+  troon: ['small-removals'],
+  ayr: ['small-removals', 'end-of-tenancy', 'flat-pack-assembly'],
+  dalry: ['waste-removal'],
+  ardrossan: ['waste-removal', 'flat-pack-assembly'],
+  cumnock: ['waste-removal'],
+  auchinleck: ['small-removals'],
+  mauchline: ['end-of-tenancy'],
+  prestwick: ['courier', 'waste-removal'],
+  girvan: ['waste-removal', 'end-of-tenancy', 'courier'],
+};
 
 const PRIORITY_LOCATIONS = new Set([
   'cumnock', 'ayr', 'kilmarnock', 'irvine', 'troon', 'prestwick',
@@ -63,8 +72,8 @@ const entries = [
   urlEntry('/blog', { priority: '0.6' }),
   urlEntry('/blog/beyond-the-boxes', { priority: '0.5' }),
   urlEntry('/blog/sepa-registered-waste-disposal', { priority: '0.5' }),
-  ...LOW_RANKING_LOCATIONS.flatMap((location) =>
-    SERVICES.map((service) =>
+  ...Object.entries(LOCATION_SERVICE_PAGES).flatMap(([location, services]) =>
+    services.map((service) =>
       urlEntry(`/locations/${location}/${service}`, { priority: '0.7' })
     )
   ),

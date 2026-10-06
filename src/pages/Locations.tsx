@@ -68,11 +68,6 @@ const Locations = () => {
       nearbyAreas: ["Kilmarnock", "Irvine", "Dreghorn"]
     },
     {
-      name: "Dalrymple",
-      slug: "dalrymple",
-      nearbyAreas: ["Ayr", "Mauchline", "Cumnock"]
-    },
-    {
       name: "Mauchline",
       slug: "mauchline",
       nearbyAreas: ["Kilmarnock", "Cumnock", "Ayr"]
@@ -136,11 +131,6 @@ const Locations = () => {
       name: "Newmilns",
       slug: "newmilns",
       nearbyAreas: ["Darvel", "Kilmarnock", "Galston"]
-    },
-    {
-      name: "Galston",
-      slug: "galston",
-      nearbyAreas: ["Kilmarnock", "Darvel", "Newmilns"]
     },
     {
       name: "Kirkconnel",

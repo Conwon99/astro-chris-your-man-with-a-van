@@ -75,6 +75,29 @@ export const LOW_RANKING_SLUGS = new Set(
   LOW_RANKING_LOCATIONS.map((location) => location.slug)
 );
 
+/**
+ * Location+service pages that earned clicks in GSC (16-month export, 2026-10-06).
+ * The other combinations were removed and 301-redirect to the town hub
+ * (see public/_redirects and LOCATION-PAGES-SPAM-REMOVAL.md).
+ */
+export const LOCATION_SERVICE_PAGES: Record<string, string[]> = {
+  irvine: ["small-removals", "waste-removal", "flat-pack-assembly"],
+  kilmarnock: ["small-removals"],
+  troon: ["small-removals"],
+  ayr: ["small-removals", "end-of-tenancy", "flat-pack-assembly"],
+  dalry: ["waste-removal"],
+  ardrossan: ["waste-removal", "flat-pack-assembly"],
+  cumnock: ["waste-removal"],
+  auchinleck: ["small-removals"],
+  mauchline: ["end-of-tenancy"],
+  prestwick: ["courier", "waste-removal"],
+  girvan: ["waste-removal", "end-of-tenancy", "courier"],
+};
+
+export function hasLocationServicePage(locationSlug: string, serviceSlug: string): boolean {
+  return LOCATION_SERVICE_PAGES[locationSlug]?.includes(serviceSlug) ?? false;
+}
+
 /** Nearby towns for same-service cross-linking */
 export const NEARBY_LOCATIONS: Record<string, string[]> = {
   irvine: ["kilwinning", "saltcoats", "ardrossan", "troon"],
@@ -111,7 +134,7 @@ export function isLowRankingLocation(slug: string): boolean {
 }
 
 export function getServiceLink(locationSlug: string, serviceSlug: string): string {
-  if (isLowRankingLocation(locationSlug)) {
+  if (hasLocationServicePage(locationSlug, serviceSlug)) {
     return `/locations/${locationSlug}/${serviceSlug}`;
   }
   return `/services/${serviceSlug}`;
@@ -130,9 +153,9 @@ export function getServiceBySlug(slug: string): ServiceDefinition | undefined {
 }
 
 export function getLocationServiceStaticPaths() {
-  return LOW_RANKING_LOCATIONS.flatMap((location) =>
-    SERVICES.map((service) => ({
-      params: { location: location.slug, service: service.slug },
+  return Object.entries(LOCATION_SERVICE_PAGES).flatMap(([location, services]) =>
+    services.map((service) => ({
+      params: { location, service },
     }))
   );
 }
@@ -155,7 +178,7 @@ export function getLocationServiceSEO(locationSlug: string, serviceSlug: string)
   const location = getLocationBySlug(locationSlug);
   const service = getServiceBySlug(serviceSlug);
 
-  if (!location || !service) {
+  if (!location || !service || !hasLocationServicePage(locationSlug, serviceSlug)) {
     return null;
   }
 
