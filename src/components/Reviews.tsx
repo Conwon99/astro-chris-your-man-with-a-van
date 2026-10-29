@@ -1,7 +1,16 @@
-import { useEffect } from "react";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Star, ArrowRight, ExternalLink } from "lucide-react";
 import { trackNavigation } from "@/utils/analytics";
 import GoogleReviewsBadge from "@/components/GoogleReviewsBadge";
+
+interface Review {
+  name: string;
+  rating: number;
+  text: string;
+  time?: number;
+  relativeTimeDescription?: string;
+  profilePhotoUrl?: string | null;
+}
 
 interface ReviewsProps {
   locationName?: string;
@@ -9,21 +18,74 @@ interface ReviewsProps {
   quoteSectionId?: string;
 }
 
-const ELFSIGHT_SCRIPT_SRC = "https://elfsightcdn.com/platform.js";
+// Fallback static reviews
+const staticReviews: Review[] = [
+  {
+    name: "Ali Mitch",
+    rating: 5,
+    text: "Fantastic service. efficient and kept in touch throughout. Will definitely use again. highly recommend"
+  },
+  {
+    name: "Sammy Gibson Stead",
+    rating: 5,
+    text: "I used Chris for a family member today who needed items picked up and delivered to new house . Very professional , queries answered promptly which was much appreciated. Price , time and updates all very clearly communicated before and on the day . Absolutey recommend these services, thankyou."
+  },
+  {
+    name: "Al Walking Ayrshire",
+    rating: 5,
+    text: "I contacted Chris at short notice for a job to move a dining table from Lanarkshire to Ayrshire. Chis was friendly, approachable and very good value. The table was picked up and delivered to my home in Ayrshire in perfect condition. I will definitely use Chris again 👍🏻"
+  }
+];
 
 const Reviews = ({
   locationName,
   reviewCount = 100,
   quoteSectionId = "contact-form",
 }: ReviewsProps) => {
+  const [reviews, setReviews] = useState<Review[]>(staticReviews);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
   useEffect(() => {
-    // Load the Elfsight platform script once per page
-    if (document.querySelector(`script[src="${ELFSIGHT_SCRIPT_SRC}"]`)) return;
-    const script = document.createElement("script");
-    script.src = ELFSIGHT_SCRIPT_SRC;
-    script.async = true;
-    document.body.appendChild(script);
+    // Fetch live reviews from API
+    const fetchReviews = async () => {
+      try {
+        setIsLoading(true);
+        const response = await fetch('/api/reviews');
+        const data = await response.json();
+
+        if (data.success && data.reviews && data.reviews.length > 0) {
+          // Use live reviews if available
+          setReviews(data.reviews);
+          setError(null);
+        } else {
+          // Fallback to static reviews if API fails or returns no reviews
+          setReviews(staticReviews);
+          setError(data.error || 'No reviews available');
+        }
+      } catch (err) {
+        // Fallback to static reviews on error
+        console.error('Failed to fetch reviews:', err);
+        setReviews(staticReviews);
+        setError('Failed to load reviews');
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    fetchReviews();
   }, []);
+
+  const renderStars = (rating: number) => {
+    return Array.from({ length: 5 }, (_, i) => (
+      <Star
+        key={i}
+        className={`w-5 h-5 ${
+          i < rating ? "text-accent fill-current" : "text-muted-foreground/30"
+        }`}
+      />
+    ));
+  };
 
   const handleGoogleReviewClick = () => {
     trackNavigation('google-reviews');
@@ -83,13 +145,61 @@ const Reviews = ({
           </button>
         </div>
 
-        {/* Google Reviews Widget (Elfsight) - rendered as raw HTML so React leaves the widget's DOM alone */}
-        <div
-          className="mb-12"
-          dangerouslySetInnerHTML={{
-            __html: '<div class="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy></div>',
-          }}
-        />
+        {/* Review Cards */}
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {isLoading ? (
+            // Loading skeleton
+            Array.from({ length: 3 }).map((_, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg animate-pulse"
+              >
+                <div className="flex justify-center mb-4">
+                  <div className="h-5 w-24 bg-gray-200 rounded"></div>
+                </div>
+                <div className="space-y-2 mb-4">
+                  <div className="h-4 bg-gray-200 rounded"></div>
+                  <div className="h-4 bg-gray-200 rounded"></div>
+                  <div className="h-4 bg-gray-200 rounded w-3/4"></div>
+                </div>
+                <div className="h-4 bg-gray-200 rounded w-1/2"></div>
+              </div>
+            ))
+          ) : (
+            reviews.map((review, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow"
+              >
+                <div className="flex justify-center mb-4">
+                  {renderStars(review.rating)}
+                </div>
+                
+                <blockquote className="text-gray-700 mb-4 leading-relaxed text-sm">
+                  "{review.text}"
+                </blockquote>
+                
+                <div className="space-y-2">
+                  <h3 className="font-semibold text-gray-900 text-base">
+                    {review.name}
+                  </h3>
+                  {review.relativeTimeDescription && (
+                    <span className="text-xs text-gray-500">
+                      {review.relativeTimeDescription}
+                    </span>
+                  )}
+                  {/* Google Reviews indicator */}
+                  <div className="flex items-center gap-2">
+                    <div className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center">
+                      <span className="text-white text-xs font-bold">G</span>
+                    </div>
+                    <span className="text-xs text-gray-500">Google</span>
+                  </div>
+                </div>
+              </div>
+            ))
+          )}
+        </div>
 
         {/* Google Reviews Buttons */}
         <div className="text-center space-y-4">

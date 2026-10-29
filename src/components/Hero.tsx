@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { Facebook } from "lucide-react";
 import LazyImage from "@/components/LazyImage";
-import GoogleReviewsBadge from "@/components/GoogleReviewsBadge";
 import { trackWhatsAppClick, trackFacebookMessengerClick, trackQuoteRequest, trackFormSubmit, trackExternalLink, trackFacebookPageClick, trackWhatsAppMessage, trackFacebookMessage } from "@/utils/analytics";
 
 const Hero = () => {
@@ -183,8 +182,9 @@ Please get back to me with a quote. Thanks!`;
                   Facebook Messenger
                 </Button>
               </div>
-              <div className="flex justify-center md:justify-start w-full md:w-auto pt-2 pb-1 md:pb-0">
-                <GoogleReviewsBadge goldStars className="self-start" />
+              {/* Elfsight Google Reviews widget (script loaded in pages/index.astro) */}
+              <div className="w-full pt-2 pb-1 md:pb-0">
+                <div className="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy=""></div>
               </div>
             </div>
           </div>
