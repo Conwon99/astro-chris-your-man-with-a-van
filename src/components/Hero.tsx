@@ -183,7 +183,7 @@ Please get back to me with a quote. Thanks!`;
                 </Button>
               </div>
               {/* Elfsight Google Reviews widget (script loaded in pages/index.astro) */}
-              <div className="w-full flex justify-start pt-2 pb-1 md:pb-0">
+              <div className="w-full flex justify-center md:justify-start pt-2 pb-1 md:pb-0">
                 <div className="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy=""></div>
               </div>
             </div>
