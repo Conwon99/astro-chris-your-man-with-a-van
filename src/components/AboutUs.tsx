@@ -1,6 +1,5 @@
 import { Facebook, MessageSquare } from "lucide-react";
 import AboutImageCollage from "@/components/AboutImageCollage";
-import GoogleReviewsBadge from "@/components/GoogleReviewsBadge";
 
 const AboutUs = () => {
   return (
@@ -19,7 +18,10 @@ const AboutUs = () => {
                 Hi, I'm Chris! I'm your local go-to for all things van services in Cumnock and across Ayrshire and beyond. I'm a quality-driven, SEPA registered professional turning your moving and delivery needs into reality—one job at a time. Always happy to help, no job is too small.
               </p>
 
-              <GoogleReviewsBadge goldStars />
+              {/* Elfsight Google Reviews widget (script loaded in pages/index.astro) */}
+              <div className="flex justify-start">
+                <div className="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy=""></div>
+              </div>
               
               {/* Social Media Icons */}
               <div className="space-y-4">
