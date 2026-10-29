@@ -19,7 +19,7 @@ const AboutUs = () => {
               </p>
 
               {/* Elfsight Google Reviews widget (script loaded in pages/index.astro) */}
-              <div className="flex justify-start">
+              <div className="flex justify-center md:justify-start">
                 <div className="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy=""></div>
               </div>
               
