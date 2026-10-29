@@ -9,7 +9,7 @@ interface ReviewsProps {
   quoteSectionId?: string;
 }
 
-const SOCIABLEKIT_SCRIPT_SRC = "https://widgets.sociablekit.com/google-reviews/widget.js";
+const ELFSIGHT_SCRIPT_SRC = "https://elfsightcdn.com/platform.js";
 
 const Reviews = ({
   locationName,
@@ -17,11 +17,11 @@ const Reviews = ({
   quoteSectionId = "contact-form",
 }: ReviewsProps) => {
   useEffect(() => {
-    // Load the SociableKit Google reviews widget script once per page
-    if (document.querySelector(`script[src="${SOCIABLEKIT_SCRIPT_SRC}"]`)) return;
+    // Load the Elfsight platform script once per page
+    if (document.querySelector(`script[src="${ELFSIGHT_SCRIPT_SRC}"]`)) return;
     const script = document.createElement("script");
-    script.src = SOCIABLEKIT_SCRIPT_SRC;
-    script.defer = true;
+    script.src = ELFSIGHT_SCRIPT_SRC;
+    script.async = true;
     document.body.appendChild(script);
   }, []);
 
@@ -83,11 +83,11 @@ const Reviews = ({
           </button>
         </div>
 
-        {/* Google Reviews Widget (SociableKit) - rendered as raw HTML so React leaves the widget's DOM alone */}
+        {/* Google Reviews Widget (Elfsight) - rendered as raw HTML so React leaves the widget's DOM alone */}
         <div
           className="mb-12"
           dangerouslySetInnerHTML={{
-            __html: '<div class="sk-ww-google-reviews" data-embed-id="25725949"></div>',
+            __html: '<div class="elfsight-app-511fd074-b444-47b8-98de-9886497ce216" data-elfsight-app-lazy></div>',
           }}
         />
 
