@@ -148,7 +148,7 @@ Please get back to me with a quote. Thanks!`;
             </h1>
 
             <p className="text-sm md:text-base text-white/90 font-medium max-w-lg leading-snug drop-shadow-md">
-              Removals, courier & waste removal across Ayrshire. SEPA registered. Free WhatsApp quotes.
+              Removals, courier & waste removal across Ayrshire. SEPA registered. Free WhatsApp quotes
             </p>
 
             <div id="contact-form" className="space-y-4 pt-1 w-full md:w-auto">
